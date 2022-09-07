@@ -65,7 +65,7 @@ function App() {
                 ítems, sección de pago donde es posible añadir medios de pago.
               </p>
               <div className="">
-                <Buttons project={"pokedex-app"} />
+                <Buttons project={"shopbix"} />
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ function App() {
                 className="object-top object-cover overflow-hidden rounded-3xl aspect-1"
               ></img>
               <div className="">
-                <Buttons project={"medianotes"} />
+                <Buttons project={"movie-note-app"} />
               </div>
             </div>
             <div
