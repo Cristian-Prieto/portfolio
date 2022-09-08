@@ -11,7 +11,7 @@ function App() {
       <NavBar />
       <section
         id="home"
-        className="grid min-h-screen max-w-screen justify-center bg-white"
+        className="grid min-h-screen max-w-screen justify-center bg-whitePro-50"
       >
         <div className="flex flex-col justify-center items-center max-w-7xl">
           <h1 className="flex flex-col font-Oswald">
@@ -26,7 +26,7 @@ function App() {
                 >
                   soy
                 </span>
-                <span data-aos="fade-left" className="flex text-8xl">
+                <span data-aos="fade-left" className="flex text-black text-8xl">
                   CRISTIAN PRIETO
                 </span>
               </div>
@@ -40,26 +40,27 @@ function App() {
       </section>
       <section
         id="projects"
-        className="grid min-h-screen max-w-screen justify-center  bg-yellow-400 py-20 sm:px-14"
+        className="grid min-h-screen max-w-screen justify-center  bg-greenPro-50 py-20 sm:px-14"
       >
-        <div className="flex flex-col justify-center items-center gap-4 sm:p-8">
-          <h1 data-aos="zoom-out" data-aos-duration="1000">
+        <div className="flex flex-col  justify-center items-center gap-4 sm:p-8">
+          <h1
+            className="text-4xl text-greenPro-100"
+            //  data-aos="zoom-out" data-aos-duration="1000">
+          >
             Estos son trabajos
           </h1>
           {/* aca shopbix */}
-          <h2>Shopbix</h2>
-          <div
-            // data-aos="fade-right"
-            className="flex flex-col items-center justify-center lg:flex-row w-full"
-          >
-            <div className="flex  w-full">
+
+          <div className="flex w-full flex-col lg:flex-row mb-12 bg-white sm:rounded-xl">
+            <div data-aos="fade-in" className="flex w-full sm:max-w-[50rem]">
               <img
                 src="images/shopbix2.png"
                 alt="shopbix"
                 className="w-full object-top object-cover sm:rounded-3xl  shadow-2xl min-h-[20rem]"
               ></img>
             </div>
-            <div className="w-full h-full bg-white">
+            <div className="flex w-full flex-col justify-between p-4">
+              <h2 className="text-xl text-center">Shopbix</h2>
               <p>
                 carrito de compras con las características de agregar y borrar
                 ítems, sección de pago donde es posible añadir medios de pago.
@@ -69,23 +70,27 @@ function App() {
               </div>
             </div>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  p-12 sm:p-0 space-y-12 sm:space-y-0  mt-8 gap-8">
             <div
-              // data-aos="fade-right"
-              className="flex flex-col overflow-hidden max-h-[16rem]"
+              data-aos="fade-up"
+              data-aos-duration="100"
+              className="flex flex-col overflow-hidden min-h-[10rem] max-h-[16rem] gap-4"
             >
               <img
                 src="images/Foodubix.png"
                 alt="foodubix"
-                className="object-top object-cover overflow-hidden rounded-3xl aspect-1"
+                className=" object-top object-cover overflow-hidden rounded-3xl aspect-1"
               ></img>
               <div className="">
                 <Buttons project={"foodubix"} />
               </div>
             </div>
             <div
+              data-aos="fade-up"
+              data-aos-duration="300"
               // data-aos="fade-right"
-              className="flex flex-col overflow-hidden max-h-[16rem]"
+              className="flex flex-col overflow-hidden max-h-[16rem] gap-4"
             >
               <img
                 src="images/medianotes.png"
@@ -97,8 +102,10 @@ function App() {
               </div>
             </div>
             <div
+              data-aos="fade-up"
+              data-aos-duration="600"
               // data-aos="fade-right"
-              className="flex flex-col overflow-hidden max-h-[16rem]"
+              className="flex flex-col overflow-hidden max-h-[16rem] gap-4"
             >
               <img
                 src="images/pokeapp.png"
@@ -114,7 +121,7 @@ function App() {
       </section>
       <section
         id="skills"
-        className="grid min-h-screen max-w-screen justify-center bg-purple-500 sm:px-8"
+        className="grid min-h-screen max-w-screen justify-center bg-greenPro-50 sm:px-8"
       >
         <div className="flex flex-col justify-center items-center max-w-7xl p-4 text-white">
           <h1>Esto son mis skills y Sobre mi</h1>
