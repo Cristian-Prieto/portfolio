@@ -51,15 +51,15 @@ function App() {
           </h1>
           {/* aca shopbix */}
 
-          <div className="flex w-full flex-col lg:flex-row mb-12 bg-white sm:rounded-xl">
-            <div data-aos="fade-in" className="flex w-full sm:max-w-[50rem]">
+          <article className="flex flex-col lg:flex-row mb-12 sm:rounded-3xl max-w-[60rem]">
+            <div data-aos="fade-in" className="flex min-w-[30rem]">
               <img
                 src="images/shopbix2.png"
                 alt="shopbix"
-                className="w-full object-top object-cover sm:rounded-3xl  shadow-2xl min-h-[20rem]"
+                className="w-full object-top object-cover sm:rounded-3xl shadow-2xl"
               ></img>
             </div>
-            <div className="flex w-full flex-col justify-between p-4">
+            <div className="flex w-full flex-col p-4 alig justify-center">
               <h2 className="text-xl text-center">Shopbix</h2>
               <p>
                 carrito de compras con las características de agregar y borrar
@@ -69,10 +69,87 @@ function App() {
                 <Buttons project={"shopbix"} />
               </div>
             </div>
-          </div>
+          </article>
+          <article className="flex  flex-col lg:flex-row-reverse mb-12 sm:rounded-3xl max-w-[60rem]">
+            <div data-aos="fade-in" className="flex min-w-[30rem] ">
+              <img
+                src="images/shopbix2.png"
+                alt="shopbix"
+                className="w-full object-top object-cover sm:rounded-3xl  shadow-2xl"
+              ></img>
+            </div>
+            <div className="flex w-full flex-col p-4 alig justify-center">
+              <h2 className="text-xl text-center">Foodubix</h2>
+              <p>
+                carrito de compras con las características de agregar y borrar
+                ítems, sección de pago donde es posible añadir medios de pago.
+              </p>
+              <div className="">
+                <Buttons project={"foodubix"} />
+              </div>
+            </div>
+          </article>
+          <article className="flex  flex-col lg:flex-row mb-12 sm:rounded-3xl max-w-[60rem]">
+            <div data-aos="fade-in" className="flex min-w-[30rem] ">
+              <img
+                src="images/shopbix2.png"
+                alt="movienotes"
+                className="w-full object-top object-cover sm:rounded-3xl  shadow-2xl"
+              ></img>
+            </div>
+            <div className="flex w-full flex-col p-4 justify-center">
+              <h2 className="text-xl text-center">Media-notes</h2>
+              <p>
+                carrito de compras con las características de agregar y borrar
+                ítems, sección de pago donde es posible añadir medios de pago.
+              </p>
+              <div className="">
+                <Buttons project={"movie-note-app"} />
+              </div>
+            </div>
+          </article>
+          <article className="flex  flex-col lg:flex-row-reverse mb-12 sm:rounded-3xl max-w-[60rem]">
+            <div data-aos="fade-in" className="flex min-w-[30rem] ">
+              <img
+                src="images/shopbix2.png"
+                alt="pokeapp"
+                className="w-full object-top object-cover sm:rounded-3xl  shadow-2xl"
+              ></img>
+            </div>
+            <div className="flex w-full flex-col p-4 justify-center">
+              <h2 className="text-xl text-center">Shopbix</h2>
+              <p>
+                carrito de compras con las características de agregar y borrar
+                ítems, sección de pago donde es posible añadir medios de pago.
+              </p>
+              <div className="">
+                <Buttons project={"pokedex-app"} />
+              </div>
+            </div>
+          </article>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  p-12 sm:p-0 space-y-12 sm:space-y-0  mt-8 gap-8">
-            <div
+          {/* <article className="flex w-full flex-col lg:flex-row mb-12 bg-white sm:rounded-3xl">
+            <div data-aos="fade-in" className="flex w-full ">
+              <img
+                src="images/shopbix2.png"
+                alt="shopbix"
+                className="w-full object-top object-cover sm:rounded-3xl  shadow-2xl min-h-[20rem]"
+              ></img>
+            </div>
+            <div className="flex w-full flex-col p-4 alig">
+              <h2 className="text-xl text-center">Shopbix</h2>
+              <p>
+                carrito de compras con las características de agregar y borrar
+                ítems, sección de pago donde es posible añadir medios de pago.
+              </p>
+              <div className="">
+                <Buttons project={"shopbix"} />
+              </div>
+            </div>
+          </article> */}
+
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  p-12 sm:p-0 space-y-12 sm:space-y-0  mt-8 gap-8">
+            <article
               data-aos="fade-up"
               data-aos-duration="100"
               className="flex flex-col overflow-hidden min-h-[10rem] max-h-[16rem] gap-4"
@@ -80,13 +157,13 @@ function App() {
               <img
                 src="images/Foodubix.png"
                 alt="foodubix"
-                className=" object-top object-cover overflow-hidden rounded-3xl aspect-1"
+                className="w-full object-top object-cover overflow-hidden rounded-3xl aspect-1"
               ></img>
               <div className="">
                 <Buttons project={"foodubix"} />
               </div>
-            </div>
-            <div
+            </article>
+            <article
               data-aos="fade-up"
               data-aos-duration="300"
               // data-aos="fade-right"
@@ -100,8 +177,8 @@ function App() {
               <div className="">
                 <Buttons project={"movie-note-app"} />
               </div>
-            </div>
-            <div
+            </article>
+            <article
               data-aos="fade-up"
               data-aos-duration="600"
               // data-aos="fade-right"
@@ -115,24 +192,21 @@ function App() {
               <div className="">
                 <Buttons project={"pokedex-app"} />
               </div>
-            </div>
-          </div>
+            </article>
+          </div> */}
         </div>
       </section>
       <section
         id="skills"
-        className="grid min-h-screen max-w-screen justify-center bg-greenPro-50 sm:px-8"
+        className="grid min-h-screen max-w-screen justify-center bg-whitePro-50 sm:px-8"
       >
-        <div className="flex flex-col justify-center items-center max-w-7xl p-4 text-white">
-          <h1>Esto son mis skills y Sobre mi</h1>
-          <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+        <div className="flex flex-col justify-center items-center max-w-7xl p-4">
+          <h1>Sobre mi</h1>
+          <p className="w-1/2">
+            Tengo 34 años, soy Argentino de procedencia y actualmente vivo en
+            España. Tengo formacion en artes plásticas pero di un giro a mi vida
+            y ahora tengo un objetivo claro: dedicarme en cuerpo y alma a la
+            programacion.
           </p>
         </div>
       </section>
