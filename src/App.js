@@ -44,7 +44,7 @@ function App() {
       >
         <div className="flex flex-col  justify-center items-center gap-4 sm:p-8">
           <h1
-            className="text-4xl text-greenPro-100"
+            className="text-4xl text-greenPro-100 bg-red-500 w-full"
             //  data-aos="zoom-out" data-aos-duration="1000">
           >
             Estos son trabajos
@@ -52,7 +52,7 @@ function App() {
           {/* aca shopbix */}
 
           <article className="flex flex-col lg:flex-row mb-12 sm:rounded-3xl max-w-[60rem]">
-            <div data-aos="fade-in" className="flex min-w-[30rem]">
+            <div data-aos="fade-in" className="flex min-w-[20rem]">
               <img
                 src="images/shopbix2.png"
                 alt="shopbix"
@@ -71,7 +71,7 @@ function App() {
             </div>
           </article>
           <article className="flex  flex-col lg:flex-row-reverse mb-12 sm:rounded-3xl max-w-[60rem]">
-            <div data-aos="fade-in" className="flex min-w-[30rem] ">
+            <div data-aos="fade-in" className="flex min-w-[20rem] ">
               <img
                 src="images/shopbix2.png"
                 alt="shopbix"
@@ -90,7 +90,7 @@ function App() {
             </div>
           </article>
           <article className="flex  flex-col lg:flex-row mb-12 sm:rounded-3xl max-w-[60rem]">
-            <div data-aos="fade-in" className="flex min-w-[30rem] ">
+            <div data-aos="fade-in" className="flex min-w-[20rem] ">
               <img
                 src="images/shopbix2.png"
                 alt="movienotes"
@@ -109,7 +109,7 @@ function App() {
             </div>
           </article>
           <article className="flex  flex-col lg:flex-row-reverse mb-12 sm:rounded-3xl max-w-[60rem]">
-            <div data-aos="fade-in" className="flex min-w-[30rem] ">
+            <div data-aos="fade-in" className="flex min-w-[20rem] ">
               <img
                 src="images/shopbix2.png"
                 alt="pokeapp"
