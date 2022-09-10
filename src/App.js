@@ -184,7 +184,7 @@ function App() {
           </div>
           <div className="flex flex-col items-center md:items-end">
             <h1 className="text-xl text-center sm:text-right mb-4">Skills</h1>
-            <div className="flex justify-center gap-4">
+            <div className="flex justify-between sm:justify-center sm:gap-4">
               <div className="group flex flex-col items-center gap-4">
                 <SiHtml5 className="text-4xl text-black hover:text-red-400 transition hover:scale-125" />
                 <span className="scale-0 group-hover:scale-100 transition">
@@ -231,9 +231,9 @@ function App() {
         <div
           className={`flex flex-col md:flex-row justify-between text-right gap-8 md:gap-0 opacity-${extraInfo} transition duration-300`}
         >
-          <div className="group text-center ">
-            <span className=" text-white bg-black ">Paises</span>
-            <div className="flex flex-col scale-0 group-hover:scale-100 transition">
+          <div className="group text-center">
+            <span className="">Paises</span>
+            <div className="flex flex-col scale-0 group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
               <span className="">Argentina-1988/2002</span>
               <span>Israel-2002/2004</span>
               <span>España-2019</span>
@@ -242,14 +242,14 @@ function App() {
 
           <div className="group text-center">
             <span>Libros favoritos</span>
-            <div className="flex flex-col scale-0 group-hover:scale-100 transition">
+            <div className="flex flex-col scale-0 group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
               <span>Archivo de las tormentas</span>
               <span>Nacidos de la bruma</span>
             </div>
           </div>
           <div className="group text-center">
             <span>Series favoritas</span>
-            <div className="flex flex-col scale-0 group-hover:scale-100 transition">
+            <div className="flex flex-col scale-0 group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
               <span>Full metal alchemist: Brotherhood</span>
               <span>Better call Saul</span>
             </div>
@@ -257,14 +257,14 @@ function App() {
 
           <div className="group text-center">
             <span>Juegos favoritos</span>
-            <div className="flex flex-col scale-0 group-hover:scale-100 transition">
+            <div className="flex flex-col scale-0 group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
               <span>Sekiro</span>
               <span>The last of us 1 y 2</span>
             </div>
           </div>
           <div className="group text-center">
             <span>Arte</span>
-            <div className="flex flex-col scale-0 group-hover:scale-100 transition">
+            <div className="flex flex-col scale-0 group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
               <span>Licenciado en Bellas Artes</span>
             </div>
           </div>
