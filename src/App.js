@@ -40,9 +40,10 @@ function Article({ children, reverse = false }) {
 }
 
 function App() {
-  const [extraInfo, setExtraInfo] = useState(false);
+  const [extraInfo, setExtraInfo] = useState("0");
+
   const showExtra = () => {
-    setExtraInfo((prevState) => !prevState);
+    extraInfo === "0" ? setExtraInfo("100") : setExtraInfo("0");
   };
   Aos.init({ easing: "ease-in" });
   return (
@@ -226,56 +227,48 @@ function App() {
         <h1 onClick={showExtra} className="text-xl text-center mt-8 mb-4">
           Otros datos
         </h1>
-        {extraInfo && (
-          <p className="flex flex-col md:flex-row justify-between text-right gap-8 md:gap-0 ">
-            <div className="group text-center">
-              <span className=" text-white bg-black">Paises</span>
-              <div className="flex flex-col scale-0 group-hover:scale-100 transition">
-                <span className="">Argentina-1988/2002</span>
-                <span>Israel-2002/2004</span>
-                <span>España-2004/2012</span>
-                <span>Argentina-2012/2019</span>
-                <span>España-2019</span>
-              </div>
-            </div>
-            <div className="group text-center">
-              <span>Libros favoritos</span>
-              <div className="flex flex-col scale-0 group-hover:scale-100 transition">
-                <span>Archivo de las tormentas</span>
-                <span>Nacidos de la bruma</span>
-              </div>
-            </div>
-            <div className="group text-center">
-              <span>Peliculas favoritas</span>
-              <div className="flex flex-col scale-0 group-hover:scale-100 transition">
-                <span>The man from earth</span>
-                <span>Spiderman into the spiderverse</span>
-              </div>
-            </div>
-            <div className="group text-center">
-              <span>Series favoritas</span>
-              <div className="flex flex-col scale-0 group-hover:scale-100 transition">
-                <span>Full metal alchemist: Brotherhood</span>
-                <span>Better call Saul</span>
-                <span>Succession</span>
-              </div>
-            </div>
 
-            <div className="group text-center">
-              <span>Juegos favoritos</span>
-              <div className="flex flex-col scale-0 group-hover:scale-100 transition">
-                <span>Sekiro</span>
-                <span>The last of us 1 y 2</span>
-              </div>
+        <div
+          className={`flex flex-col md:flex-row justify-between text-right gap-8 md:gap-0 opacity-${extraInfo}`}
+        >
+          <div className="group text-center ">
+            <span className=" text-white bg-black ">Paises</span>
+            <div className="flex flex-col scale-0 group-hover:scale-100 transition">
+              <span className="">Argentina-1988/2002</span>
+              <span>Israel-2002/2004</span>
+              <span>España-2019</span>
             </div>
-            <div className="group text-center">
-              <span>Arte</span>
-              <div className="flex flex-col scale-0 group-hover:scale-100 transition">
-                <span>Licenciado en Bellas Artes</span>
-              </div>
+          </div>
+
+          <div className="group text-center">
+            <span>Libros favoritos</span>
+            <div className="flex flex-col scale-0 group-hover:scale-100 transition">
+              <span>Archivo de las tormentas</span>
+              <span>Nacidos de la bruma</span>
             </div>
-          </p>
-        )}
+          </div>
+          <div className="group text-center">
+            <span>Series favoritas</span>
+            <div className="flex flex-col scale-0 group-hover:scale-100 transition">
+              <span>Full metal alchemist: Brotherhood</span>
+              <span>Better call Saul</span>
+            </div>
+          </div>
+
+          <div className="group text-center">
+            <span>Juegos favoritos</span>
+            <div className="flex flex-col scale-0 group-hover:scale-100 transition">
+              <span>Sekiro</span>
+              <span>The last of us 1 y 2</span>
+            </div>
+          </div>
+          <div className="group text-center">
+            <span>Arte</span>
+            <div className="flex flex-col scale-0 group-hover:scale-100 transition">
+              <span>Licenciado en Bellas Artes</span>
+            </div>
+          </div>
+        </div>
       </Section>
       <Section id="contact" className="bg-black">
         <div className="flex flex-col justify-center items-center max-w-7xl text-white p-4">
