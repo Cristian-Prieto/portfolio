@@ -1,8 +1,8 @@
 import { Link } from "react-scroll";
 export function NavBar() {
   return (
-    <nav className="flex fixed top-0 h-20 w-full list-none justify-center text-2xl z-10 bg-black text-white">
-      <ul className="flex items-center justify-center  space-x-8">
+    <nav className="flex fixed top-0 h-20 w-full justify-center text-xl z-10 bg-black text-white">
+      <ul className="flex items-center justify-center list-none">
         <li>
           <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
             Home
