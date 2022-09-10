@@ -20,9 +20,7 @@ function Section({ children, id, className }) {
   return (
     <section
       id={id}
-      className={`min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center ${
-        className ?? ""
-      }`}
+      className={`min-h-[calc(100vh-5rem)] flex flex-col ${className ?? ""}`}
     >
       <div className="container mx-auto">{children}</div>
     </section>
@@ -50,7 +48,10 @@ function App() {
   return (
     <div className="font-roboto">
       <NavBar />
-      <Section id="home" className="bg-whitePro-50 mt-20">
+      <Section
+        id="home"
+        className="justify-center items-center bg-whitePro-50 mt-20"
+      >
         <div className="flex flex-col justify-center items-center max-w-7xl">
           <h1 className="flex flex-col font-Oswald">
             <div className="flex flex-col text-left">
@@ -76,7 +77,10 @@ function App() {
           </h1>
         </div>
       </Section>
-      <Section id="projects" className="bg-greenPro-50 py-20">
+      <Section
+        id="projects"
+        className="justify-center items-center bg-greenPro-50 py-20"
+      >
         <div className="flex flex-col  justify-center items-center gap-4">
           <h1
             className="text-4xl text-greenPro-100 w-full"
@@ -164,10 +168,10 @@ function App() {
         </div>
       </Section>
       <Section id="skills" className="p-4 bg-whitePro-50">
-        <div className="flex flex-col-reverse md:flex-row justify-between mt-32 gap-8">
+        <div className="flex flex-col-reverse md:flex-row justify-between align-top gap-8 my-32 p-4 rounded-xl bg-white">
           <div className="flex flex-col lg:max-w-lg">
             <h1 className="text-xl text-center md:text-left mb-4">Sobre mi</h1>
-            <p>
+            <p className="text-lg">
               Tengo 34 años, mi lengua materna es el español pero puedo
               manejarme en ingles. Tengo un pasado en las artes plásticas pero
               di un cambio a mi vida, ahora me dedico en cuerpo y alma a la
@@ -219,11 +223,11 @@ function App() {
             </div>
           </div>
         </div>
-        <h1 onClick={showExtra} className="text-xl text-center mt-32 mb-4">
+        <h1 onClick={showExtra} className="text-xl text-center mt-8 mb-4">
           Otros datos
         </h1>
         {extraInfo && (
-          <p className="flex flex-col md:flex-row justify-between text-right gap-8 md:gap-0 mb-16">
+          <p className="flex flex-col md:flex-row justify-between text-right gap-8 md:gap-0 ">
             <div className="group text-center">
               <span className=" text-white bg-black">Paises</span>
               <div className="flex flex-col scale-0 group-hover:scale-100 transition">
