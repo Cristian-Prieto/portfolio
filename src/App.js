@@ -229,7 +229,7 @@ function App() {
         </h1>
 
         <div
-          className={`flex flex-col md:flex-row justify-between text-right gap-8 md:gap-0 opacity-${extraInfo}`}
+          className={`flex flex-col md:flex-row justify-between text-right gap-8 md:gap-0 opacity-${extraInfo} transition duration-300`}
         >
           <div className="group text-center ">
             <span className=" text-white bg-black ">Paises</span>
