@@ -3,9 +3,8 @@ import "aos/dist/aos.css";
 import "./App.css";
 import Aos from "aos";
 import { Buttons } from "./components/Buttons";
-// import { HtmlIcon } from "./icons/HtmlIcon";
-// import { VscodeIcon } from "./icons/Vscode";
-// import { JsIcon } from "./icons/JsIcon";
+import emailjs from "emailjs-com";
+
 import {
   SiReact,
   SiHtml5,
@@ -30,8 +29,8 @@ function Section({ children, id, className }) {
 function Article({ children, reverse = false }) {
   return (
     <article
-      className={`flex flex-col gap-4 p-4 lg:${
-        reverse ? "flex-row-reverse" : "flex-row"
+      className={`flex flex-col gap-4 p-4 ${
+        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
       } mb-12`}
     >
       {children}
@@ -40,11 +39,32 @@ function Article({ children, reverse = false }) {
 }
 
 function App() {
-  const [extraInfo, setExtraInfo] = useState("0");
+  const [sendValue, setSendValue] = useState("Send");
 
-  const showExtra = () => {
-    extraInfo === "0" ? setExtraInfo("100") : setExtraInfo("0");
+  const sendEmail = (event) => {
+    event.preventDefault();
+    setSendValue("Sending...");
+    emailjs
+      .sendForm("gmail", "template_1", event.target, "yDtdNMq6_eUrZqZDm")
+      .then(
+        (result) => {
+          setSendValue("Email sended!");
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      )
+      .then(setSendValue("Send"));
+
+    event.target.reset();
   };
+
+  // const [extraInfo, setExtraInfo] = useState("0");
+
+  // const showExtra = () => {
+  //   extraInfo === "0" ? setExtraInfo("100") : setExtraInfo("0");
+  // };
   Aos.init({ easing: "ease-in" });
   return (
     <div className="font-roboto">
@@ -104,7 +124,7 @@ function App() {
                 carrito de compras con las características de agregar y borrar
                 ítems, sección de pago donde es posible añadir medios de pago.
               </p>
-              <div className="">
+              <div>
                 <Buttons project={"shopbix"} />
               </div>
             </div>
@@ -168,9 +188,50 @@ function App() {
           </Article>
         </div>
       </Section>
-      <Section id="skills" className="p-4 bg-whitePro-50">
-        <div className="flex flex-col-reverse md:flex-row justify-between align-top gap-8 my-32 p-4 rounded-xl bg-white">
-          <div className="flex flex-col lg:max-w-lg">
+      <Section id="skills" className="p-4 bg-pink-50">
+        <div className="flex flex-col items-center mt-24 mb-4">
+          <h1 className="text-xl text-center sm:text-right mb-4">Skills</h1>
+          <div className="flex justify-between sm:justify-center sm:gap-4">
+            <div className="group flex flex-col items-center gap-4">
+              <SiHtml5 className="text-4xl text-white hover:text-red-400 transition hover:scale-125" />
+              <span className="scale-0 group-hover:scale-100 transition">
+                HTML5
+              </span>
+            </div>
+            <div className="group flex flex-col items-center gap-4">
+              <SiCss3 className="text-4xl text-white hover:text-blue-400 transition hover:scale-125" />
+              <span className="scale-0 group-hover:scale-100 transition">
+                CSS3
+              </span>
+            </div>
+            <div className="group flex flex-col items-center gap-4">
+              <SiJavascript className="text-4xl text-white hover:text-yellow-400 transition hover:scale-125" />
+              <span className="scale-0 group-hover:scale-100 transition">
+                JavaScript
+              </span>
+            </div>
+            <div className="group flex flex-col items-center gap-4">
+              <SiReact className="text-4xl text-white hover:text-cyan-700 transition hover:scale-125" />
+              <span className="scale-0 group-hover:scale-100 transition">
+                React
+              </span>
+            </div>
+            <div className="group flex flex-col items-center gap-4">
+              <SiTailwindcss className="text-4xl text-white hover:text-cyan-400 transition hover:scale-125" />
+              <span className="scale-0 group-hover:scale-100 transition">
+                Tailwind
+              </span>
+            </div>
+            <div className="group flex flex-col items-center gap-4">
+              <SiVisualstudiocode className="text-4xl text-white hover:text-blue-500 transition hover:scale-125" />
+              <span className="scale-0 group-hover:scale-100 transition">
+                VSC
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row justify-between align-top p-4 rounded-xl bg-white">
+          <div className="flex flex-col lg:max-w-lg p-4">
             <h1 className="text-xl text-center md:text-left mb-4">Sobre mi</h1>
             <p className="text-lg">
               Tengo 34 años, mi lengua materna es el español pero puedo
@@ -182,106 +243,99 @@ function App() {
               construyo.
             </p>
           </div>
-          <div className="flex flex-col items-center md:items-end">
-            <h1 className="text-xl text-center sm:text-right mb-4">Skills</h1>
-            <div className="flex justify-between sm:justify-center sm:gap-4">
-              <div className="group flex flex-col items-center gap-4">
-                <SiHtml5 className="text-4xl text-black hover:text-red-400 transition hover:scale-125" />
-                <span className="scale-0 group-hover:scale-100 transition">
-                  HTML5
-                </span>
-              </div>
-              <div className="group flex flex-col items-center gap-4">
-                <SiCss3 className="text-4xl text-black hover:text-blue-400 transition hover:scale-125" />
-                <span className="scale-0 group-hover:scale-100 transition">
-                  CSS3
-                </span>
-              </div>
-              <div className="group flex flex-col items-center gap-4">
-                <SiJavascript className="text-4xl text-black hover:text-yellow-400 transition hover:scale-125" />
-                <span className="scale-0 group-hover:scale-100 transition">
-                  JavaScript
-                </span>
-              </div>
-              <div className="group flex flex-col items-center gap-4">
-                <SiReact className="text-4xl text-black hover:text-cyan-700 transition hover:scale-125" />
-                <span className="scale-0 group-hover:scale-100 transition">
-                  React
-                </span>
-              </div>
-              <div className="group flex flex-col items-center gap-4">
-                <SiTailwindcss className="text-4xl text-black hover:text-cyan-400 transition hover:scale-125" />
-                <span className="scale-0 group-hover:scale-100 transition">
-                  Tailwind
-                </span>
-              </div>
-              <div className="group flex flex-col items-center gap-4">
-                <SiVisualstudiocode className="text-4xl text-black hover:text-blue-500 transition hover:scale-125" />
-                <span className="scale-0 group-hover:scale-100 transition">
-                  VSC
-                </span>
+          {/* <h1 className="text-xl text-center mt-8 mb-4">Otros datos</h1> */}
+          <div className="flex flex-col text-center lg:text-right m-4">
+            <div className="group">
+              <span>Paises</span>
+              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
+                <span className="">Argentina-1988/2002</span>
+                <span>Israel-2002/2004</span>
+                <span>España-2019</span>
               </div>
             </div>
-          </div>
-        </div>
-        <h1 onClick={showExtra} className="text-xl text-center mt-8 mb-4">
-          Otros datos
-        </h1>
 
-        <div
-          className={`flex flex-col md:flex-row justify-between text-right gap-8 md:gap-0 opacity-${extraInfo} transition duration-300`}
-        >
-          <div className="group text-center">
-            <span className="">Paises</span>
-            <div className="flex flex-col scale-0 group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
-              <span className="">Argentina-1988/2002</span>
-              <span>Israel-2002/2004</span>
-              <span>España-2019</span>
+            <div className="group">
+              <span>Libro favorito</span>
+              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
+                <span>Archivo de las tormentas - saga</span>
+              </div>
             </div>
-          </div>
+            <div className="group">
+              <span>Serie favorita</span>
+              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
+                <span>Full metal alchemist: Brotherhood</span>
+              </div>
+            </div>
 
-          <div className="group text-center">
-            <span>Libros favoritos</span>
-            <div className="flex flex-col scale-0 group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
-              <span>Archivo de las tormentas</span>
-              <span>Nacidos de la bruma</span>
+            <div className="group">
+              <span>Juego favorito</span>
+              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
+                <span>The last of us 2</span>
+              </div>
             </div>
-          </div>
-          <div className="group text-center">
-            <span>Series favoritas</span>
-            <div className="flex flex-col scale-0 group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
-              <span>Full metal alchemist: Brotherhood</span>
-              <span>Better call Saul</span>
-            </div>
-          </div>
-
-          <div className="group text-center">
-            <span>Juegos favoritos</span>
-            <div className="flex flex-col scale-0 group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
-              <span>Sekiro</span>
-              <span>The last of us 1 y 2</span>
-            </div>
-          </div>
-          <div className="group text-center">
-            <span>Arte</span>
-            <div className="flex flex-col scale-0 group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
-              <span>Licenciado en Bellas Artes</span>
+            <div className="group">
+              <span>Arte</span>
+              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
+                <span>Licenciado en Bellas Artes</span>
+              </div>
             </div>
           </div>
         </div>
       </Section>
       <Section id="contact" className="bg-black">
-        <div className="flex flex-col justify-center items-center max-w-7xl text-white p-4">
-          <h1>contactar</h1>
-          <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+        <div className="flex flex-col justify-center my-16 mx-auto max-w-[30rem] text-center text-white p-4">
+          <h1 className="text-2xl mb-8">Ponte en contacto conmigo</h1>
+          <span className="mb-4">
+            Me pondré en contacto contigo apenas sea posible
+          </span>
+          <form
+            onSubmit={sendEmail}
+            className="flex flex-col flex-1 gap-4 text-black"
+          >
+            <div className="flex">
+              <input
+                type="text"
+                name="name"
+                placeholder="Tu nombre completo"
+                required
+                className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300"
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Dirección de correos válida"
+                required
+                className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300 valid:bg-slate-700"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Motivo del mensaje"
+                required
+                className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300"
+              />
+            </div>
+            <div>
+              <textarea
+                name="message"
+                placeholder="Tu mensaje"
+                rows="6"
+                required
+                className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300"
+              ></textarea>
+            </div>
+            <div>
+              <input
+                type="submit"
+                value={sendValue}
+                className="bg-red-500 w-full hover:bg-red-300"
+              />
+            </div>
+          </form>
         </div>
       </Section>
     </div>
