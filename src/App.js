@@ -197,8 +197,8 @@ function App() {
               <h1 className="text-4xl text-center sm:text-right font-Oswald">
                 Skills
               </h1>
-              <div className="flex justify-between sm:justify-center mt-4 pt-10 sm:gap-4 rounded-3xl bg-slate-200 hover:bg-white transition duration-300 w-full">
-                <div className="group flex flex-col items-center min-w-[4rem] gap-4">
+              <div className="grid grid-cols-3 sm:flex justify-between sm:justify-center mt-4 pt-10 sm:gap-4 rounded-3xl bg-slate-200 hover:bg-white transition duration-300 w-full">
+                <div className="group flex flex-col items-center min-w-[4rem] sm:gap-4">
                   <SiHtml5 className="text-4xl text-black hover:text-red-400 transition hover:scale-125 " />
                   <span className="scale-0 group-hover:scale-100 transition">
                     HTML5
@@ -255,9 +255,15 @@ function App() {
                 Paises
               </span>
               <div className="flex flex-col sm:flex-row scale-0 justify-center group-hover:scale-100 transition px-4 py-2 my-2 gap-4 bg-greenPro-50 rounded-xl">
-                <span className="font-semibold">Argentina</span> 1988-2002
-                <span className="font-semibold">Israel</span> 2002-2004
-                <span className="font-semibold">España</span> 2019
+                <div>
+                  <span className="font-semibold">Argentina</span> 1988-2002
+                </div>
+                <div>
+                  <span className="font-semibold">Israel</span> 2002-2004
+                </div>
+                <div>
+                  <span className="font-semibold">España</span> 2019
+                </div>
               </div>
             </div>
 
