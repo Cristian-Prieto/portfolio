@@ -29,7 +29,7 @@ function Section({ children, id, className }) {
 function Article({ children, reverse = false }) {
   return (
     <article
-      className={`flex flex-col gap-4 p-4 ${
+      className={`flex flex-col gap-8 max-w-[80rem] ${
         reverse ? "lg:flex-row-reverse" : "lg:flex-row"
       } mb-12`}
     >
@@ -43,20 +43,22 @@ function App() {
 
   const sendEmail = (event) => {
     event.preventDefault();
-    setSendValue("Sending...");
+
     emailjs
       .sendForm("gmail", "template_1", event.target, "yDtdNMq6_eUrZqZDm")
       .then(
         (result) => {
-          setSendValue("Email sended!");
           console.log(result.text);
         },
         (error) => {
           console.log(error.text);
         }
       )
-      .then(setSendValue("Send"));
+      .then(setSendValue("Sended!"));
 
+    setTimeout(() => {
+      setSendValue("Send");
+    }, 2000);
     event.target.reset();
   };
 
@@ -100,11 +102,11 @@ function App() {
       </Section>
       <Section
         id="projects"
-        className="justify-center items-center bg-greenPro-50 py-20"
+        className="justify-center items-center bg-greenPro-50"
       >
-        <div className="flex flex-col  justify-center items-center gap-4">
+        <div className="flex flex-col justify-center items-center mt-24 gap-4">
           <h1
-            className="text-4xl text-greenPro-100 w-full"
+            className="text-4xl text-center sm:text-right mb-4 font-Oswald"
             //  data-aos="zoom-out" data-aos-duration="1000">
           >
             Estos son trabajos
@@ -188,103 +190,118 @@ function App() {
           </Article>
         </div>
       </Section>
-      <Section id="skills" className="p-4 bg-pink-50">
-        <div className="flex flex-col items-center mt-24 mb-4">
-          <h1 className="text-xl text-center sm:text-right mb-4">Skills</h1>
-          <div className="flex justify-between sm:justify-center sm:gap-4">
-            <div className="group flex flex-col items-center gap-4">
-              <SiHtml5 className="text-4xl text-white hover:text-red-400 transition hover:scale-125" />
-              <span className="scale-0 group-hover:scale-100 transition">
-                HTML5
-              </span>
+      <Section id="skills" className=" bg-pink-50">
+        <div className="flex flex-col lg:flex-row justify-between align-top my-24 p-8 rounded-3xl max-w-[80rem] bg-white">
+          <div className="flex flex-col lg:max-w-xl p-4">
+            <div className="flex flex-col  items-center mb-4">
+              <h1 className="text-4xl text-center sm:text-right font-Oswald">
+                Skills
+              </h1>
+              <div className="flex justify-between sm:justify-center mt-4 pt-10 sm:gap-4 rounded-3xl bg-slate-200 hover:bg-white transition duration-300 w-full">
+                <div className="group flex flex-col items-center min-w-[4rem] gap-4">
+                  <SiHtml5 className="text-4xl text-black hover:text-red-400 transition hover:scale-125 " />
+                  <span className="scale-0 group-hover:scale-100 transition">
+                    HTML5
+                  </span>
+                </div>
+                <div className="group flex flex-col items-center min-w-[4rem] gap-4">
+                  <SiCss3 className="text-4xl text-black hover:text-blue-400 transition hover:scale-125" />
+                  <span className="scale-0 group-hover:scale-100 transition">
+                    CSS3
+                  </span>
+                </div>
+                <div className="group flex flex-col items-center min-w-[4rem] gap-4">
+                  <SiJavascript className="text-4xl text-black hover:text-yellow-400 transition hover:scale-125" />
+                  <span className="scale-0 group-hover:scale-100 transition">
+                    JavaScript
+                  </span>
+                </div>
+                <div className="group flex flex-col items-center min-w-[4rem] gap-4">
+                  <SiReact className="text-4xl text-black hover:text-cyan-700 transition hover:scale-125" />
+                  <span className="scale-0 group-hover:scale-100 transition">
+                    React
+                  </span>
+                </div>
+                <div className="group flex flex-col items-center min-w-[4rem] gap-4">
+                  <SiTailwindcss className="text-4xl text-black hover:text-cyan-400 transition hover:scale-125" />
+                  <span className="scale-0 group-hover:scale-100 transition">
+                    Tailwind
+                  </span>
+                </div>
+                <div className="group flex flex-col items-center min-w-[4rem] gap-4">
+                  <SiVisualstudiocode className="text-4xl text-black hover:text-blue-500 transition hover:scale-125" />
+                  <span className="scale-0 group-hover:scale-100 transition">
+                    VSC
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="group flex flex-col items-center gap-4">
-              <SiCss3 className="text-4xl text-white hover:text-blue-400 transition hover:scale-125" />
-              <span className="scale-0 group-hover:scale-100 transition">
-                CSS3
-              </span>
-            </div>
-            <div className="group flex flex-col items-center gap-4">
-              <SiJavascript className="text-4xl text-white hover:text-yellow-400 transition hover:scale-125" />
-              <span className="scale-0 group-hover:scale-100 transition">
-                JavaScript
-              </span>
-            </div>
-            <div className="group flex flex-col items-center gap-4">
-              <SiReact className="text-4xl text-white hover:text-cyan-700 transition hover:scale-125" />
-              <span className="scale-0 group-hover:scale-100 transition">
-                React
-              </span>
-            </div>
-            <div className="group flex flex-col items-center gap-4">
-              <SiTailwindcss className="text-4xl text-white hover:text-cyan-400 transition hover:scale-125" />
-              <span className="scale-0 group-hover:scale-100 transition">
-                Tailwind
-              </span>
-            </div>
-            <div className="group flex flex-col items-center gap-4">
-              <SiVisualstudiocode className="text-4xl text-white hover:text-blue-500 transition hover:scale-125" />
-              <span className="scale-0 group-hover:scale-100 transition">
-                VSC
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col lg:flex-row justify-between align-top p-4 rounded-xl bg-white">
-          <div className="flex flex-col lg:max-w-lg p-4">
-            <h1 className="text-xl text-center md:text-left mb-4">Sobre mi</h1>
-            <p className="text-lg">
-              Tengo 34 años, mi lengua materna es el español pero puedo
-              manejarme en ingles. Tengo un pasado en las artes plásticas pero
-              di un cambio a mi vida, ahora me dedico en cuerpo y alma a la
+            <h1 className="flex text-2xl justify-center md:text-left my-4 px-4 py-1 rounded-3xl bg-black text-white">
+              Sobre mi
+            </h1>
+            <p className="text-xl">
+              Tengo 34 años, mi lengua materna es el español y puedo manejarme
+              en ingles. Tengo un pasado en las artes plásticas pero di un
+              cambio a mi vida, ahora me dedico en cuerpo y alma a la
               programación. Me encanta superar metas que encuentro dificiles al
               principio, quiero mejorar mis habilidades en el front end ya que
               soy adicto a ver con mis propios ojos en la pantalla las cosas que
               construyo.
             </p>
           </div>
-          {/* <h1 className="text-xl text-center mt-8 mb-4">Otros datos</h1> */}
-          <div className="flex flex-col text-center lg:text-right m-4">
+          <div className="flex flex-col justify-between text-center lg:text-right p-4 m-4 rounded-3xl bg-slate-200 hover:bg-white transition duration-300 ">
             <div className="group">
-              <span>Paises</span>
-              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
-                <span className="">Argentina-1988/2002</span>
-                <span>Israel-2002/2004</span>
-                <span>España-2019</span>
+              <span className="inline-block bg-black text-white text-center w-40 group-hover:bg-pink-50 group-hover:w-full px-4 py-1 rounded-3xl transition-all duration-300">
+                Paises
+              </span>
+              <div className="flex flex-col sm:flex-row scale-0 justify-center group-hover:scale-100 transition px-4 py-2 my-2 gap-4 bg-greenPro-50 rounded-xl">
+                <span className="font-semibold">Argentina</span> 1988-2002
+                <span className="font-semibold">Israel</span> 2002-2004
+                <span className="font-semibold">España</span> 2019
               </div>
             </div>
 
             <div className="group">
-              <span>Libro favorito</span>
-              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
+              <span className="inline-block bg-black text-white text-center w-40 group-hover:bg-pink-50 group-hover:w-full px-4 py-1 rounded-3xl transition-all duration-300">
+                Libro favorito
+              </span>
+              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition px-4 py-2 my-2 bg-greenPro-50 rounded-xl">
                 <span>Archivo de las tormentas - saga</span>
               </div>
             </div>
             <div className="group">
-              <span>Serie favorita</span>
-              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
+              <span className="inline-block bg-black text-white text-center w-40 group-hover:bg-pink-50 group-hover:w-full px-4 py-1 rounded-3xl transition-all duration-300">
+                Serie favorita
+              </span>
+              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition px-4 py-2 my-2 bg-greenPro-50 rounded-xl">
                 <span>Full metal alchemist: Brotherhood</span>
               </div>
             </div>
 
             <div className="group">
-              <span>Juego favorito</span>
-              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
+              <span className="inline-block bg-black text-white text-center w-40 group-hover:bg-pink-50 group-hover:w-full px-4 py-1 rounded-3xl transition-all duration-300">
+                Juego favorito
+              </span>
+              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition px-4 py-2 my-2 bg-greenPro-50 rounded-xl">
                 <span>The last of us 2</span>
               </div>
             </div>
             <div className="group">
-              <span>Arte</span>
-              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition p-4 bg-greenPro-50 rounded-xl">
+              <span className="inline-block bg-black text-white text-center w-40 group-hover:bg-pink-50 group-hover:w-full px-4 py-1 rounded-3xl transition-all duration-300">
+                Arte
+              </span>
+              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition px-4 py-2 my-2 bg-greenPro-50 rounded-xl">
                 <span>Licenciado en Bellas Artes</span>
               </div>
             </div>
           </div>
         </div>
       </Section>
-      <Section id="contact" className="bg-black">
-        <div className="flex flex-col justify-center my-16 mx-auto max-w-[30rem] text-center text-white p-4">
-          <h1 className="text-2xl mb-8">Ponte en contacto conmigo</h1>
+      <Section id="contact" className=" bg-black">
+        <h1 className="text-4xl mt-28 text-center text-white mb-8 font-Oswald">
+          Ponte en contacto conmigo
+        </h1>
+        <div className="flex flex-col justify-center my-16 mx-auto max-w-[30rem] text-center text-white py-4 px-8   bg-gray-900 rounded-xl">
           <span className="mb-4">
             Me pondré en contacto contigo apenas sea posible
           </span>
@@ -332,7 +349,11 @@ function App() {
               <input
                 type="submit"
                 value={sendValue}
-                className="bg-red-500 w-full hover:bg-red-300"
+                className={`text-white rounded-md py-2 bg-red-500 w-full hover:bg-red-300 ${
+                  sendValue === "Sended!"
+                    ? "bg-green-200 pointer-events-none"
+                    : ""
+                } transition duration-300`}
               />
             </div>
           </form>
