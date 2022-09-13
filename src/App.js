@@ -255,44 +255,82 @@ function App() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-between text-center lg:text-right mt-40 rounded-3xl px-16 sm:p-0 gap-8 transition duration-300">
-            <div className="group flex-1 bg-greenPro-100 rounded-xl p-4">
-              <span className="font-Oswald text-lg tracking-wide">
-                LIBRO FAVORITO
-              </span>
-              <div className="flex flex-col pt-2 border-stone-300">
-                <span>Archivo de las tormentas - saga</span>
+            <div className="group flex-1 rounded-xl group perspective">
+              <div className="flex flex-col border-stone-300 relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+                <div className="flex flex-col absolute backface-hidden w-full-h-full rounded-xl bg-greenPro-100 p-4">
+                  <span className="font-Oswald text-lg tracking-wide">
+                    LIBRO FAVORITO
+                  </span>
+                  <div className="flex flex-col pt-2 ">
+                    <span>Archivo de las tormentas - saga</span>
+                  </div>
+                </div>
+                <div className="flex flex-1 absoolute my-rotate-y-180 backface-hidden">
+                  <img
+                    src="images/archivo.jpeg"
+                    alt="full metal"
+                    className="object-center w-full object-cover rounded-xl"
+                  ></img>
+                </div>
               </div>
             </div>
-            <div className="group flex-1 bg-greenPro-100 rounded-xl p-4 group perspective">
-              <div className="flex flex-1 flex-col border-stone-300 relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-                <div className="flex flex-col absolute backface-hidden w-full-h-full">
+            <div className="group flex-1 rounded-xl group perspective">
+              <div className="flex flex-col border-stone-300 relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+                <div className="flex flex-col absolute backface-hidden w-full-h-full rounded-xl bg-greenPro-100 p-4">
                   <span className="font-Oswald text-lg tracking-wide">
                     SERIE FAVORITA
                   </span>
-                  <span>Full metal alchemist: Brotherhood</span>
+                  <div className="flex flex-col pt-2 ">
+                    <span>Full metal alchemist: Brotherhood</span>
+                  </div>
                 </div>
-                <div className="flex h-full absoolute my-rotate-y-180 backface-hidden">
+                <div className="flex flex-1 absoolute my-rotate-y-180 backface-hidden">
                   <img
                     src="images/materu.png"
                     alt="full metal"
-                    className="object-center w-full object-cover rounded-3xl"
+                    className="object-center w-full object-cover rounded-xl"
                   ></img>
                 </div>
               </div>
             </div>
 
-            <div className="group flex-1 bg-greenPro-100 rounded-xl p-4">
-              <span className="font-Oswald text-lg tracking-wide">
-                JUEGO FAVORITO
-              </span>
-              <div className="flex flex-col pt-2 border-stone-300">
-                <span>The last of us 2</span>
+            <div className="group flex-1 rounded-xl group perspective">
+              <div className="flex flex-col border-stone-300 relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+                <div className="flex flex-col absolute backface-hidden w-full-h-full rounded-xl bg-greenPro-100 p-4">
+                  <span className="font-Oswald text-lg tracking-wide">
+                    JUEGO FAVORITO
+                  </span>
+                  <div className="flex flex-col pt-2 ">
+                    <span>The last of us 2</span>
+                  </div>
+                </div>
+                <div className="flex flex-1 absoolute my-rotate-y-180 backface-hidden">
+                  <img
+                    src="images/tlou2.jpg"
+                    alt="full metal"
+                    className="object-center w-full object-cover rounded-xl"
+                  ></img>
+                </div>
               </div>
             </div>
-            <div className="group flex-1 bg-greenPro-100 rounded-xl p-4">
-              <span className="font-Oswald text-lg tracking-wide">ARTE</span>
-              <div className="flex flex-col pt-2 border-stone-300">
-                <span>Licenciado en Bellas Artes</span>
+
+            <div className="group flex-1 rounded-xl group perspective">
+              <div className="flex flex-col border-stone-300 relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+                <div className="flex flex-col absolute backface-hidden w-full-h-full rounded-xl bg-greenPro-100 p-4">
+                  <span className="font-Oswald text-lg tracking-wide">
+                    ARTE
+                  </span>
+                  <div className="flex flex-col pt-2 ">
+                    <span>Licenciado en Bellas Artes</span>
+                  </div>
+                </div>
+                <div className="flex flex-1 absoolute my-rotate-y-180 backface-hidden">
+                  <img
+                    src="images/tlou2.jpg"
+                    alt="full metal"
+                    className="object-center w-full object-cover rounded-xl"
+                  ></img>
+                </div>
               </div>
             </div>
           </div>
