@@ -19,7 +19,9 @@ function Section({ children, id, className }) {
   return (
     <section
       id={id}
-      className={`min-h-[calc(100vh-5rem)] flex flex-col ${className ?? ""}`}
+      className={`min-h-[calc(100vh-5rem)] flex flex-col px-4 ${
+        className ?? ""
+      }`}
     >
       <div className="container mx-auto">{children}</div>
     </section>
@@ -190,113 +192,106 @@ function App() {
           </Article>
         </div>
       </Section>
-      <Section id="skills" className=" bg-pink-50">
-        <div className="flex flex-col lg:flex-row justify-between align-top my-24 p-8 rounded-3xl max-w-[80rem] bg-white">
-          <div className="flex flex-col lg:max-w-xl p-4">
-            <div className="flex flex-col  items-center mb-4">
-              <h1 className="text-4xl text-center sm:text-right font-Oswald">
-                Skills
+      <Section id="skills" className="bg-whitePro-50">
+        <div className="flex flex-col justify-between my-24 max-w-[80rem]">
+          <div className="flex flex-col lg:flex-row justify-between gap-16">
+            <div className="flex flex-col items-center mb-4">
+              <h1 className="flex font-Oswald text-4xl w-full justify-center md:text-lef mb-14">
+                HABILIDADES
               </h1>
-              <div className="grid grid-cols-3 sm:flex justify-between sm:justify-center mt-4 pt-10 sm:gap-4 rounded-3xl bg-slate-200 hover:bg-white transition duration-300 w-full">
+              <div className="grid grid-cols-3 sm:flex justify-between sm:justify-center sm:gap-4 p-4 pt-0 border-b-2 border-neutral-800">
                 <div className="group flex flex-col items-center min-w-[4rem] sm:gap-4">
                   <SiHtml5 className="text-4xl text-black hover:text-red-400 transition hover:scale-125 " />
-                  <span className="scale-0 group-hover:scale-100 transition">
+                  <span className="text-black group-hover:text-red-400 transition">
                     HTML5
                   </span>
                 </div>
                 <div className="group flex flex-col items-center min-w-[4rem] gap-4">
                   <SiCss3 className="text-4xl text-black hover:text-blue-400 transition hover:scale-125" />
-                  <span className="scale-0 group-hover:scale-100 transition">
+                  <span className="text-black group-hover:text-blue-400 transition">
                     CSS3
                   </span>
                 </div>
                 <div className="group flex flex-col items-center min-w-[4rem] gap-4">
                   <SiJavascript className="text-4xl text-black hover:text-yellow-400 transition hover:scale-125" />
-                  <span className="scale-0 group-hover:scale-100 transition">
+                  <span className="text-black group-hover:text-yellow-400 transition">
                     JavaScript
                   </span>
                 </div>
                 <div className="group flex flex-col items-center min-w-[4rem] gap-4">
                   <SiReact className="text-4xl text-black hover:text-cyan-700 transition hover:scale-125" />
-                  <span className="scale-0 group-hover:scale-100 transition">
+                  <span className="text-black group-hover:text-cyan-700 transition">
                     React
                   </span>
                 </div>
                 <div className="group flex flex-col items-center min-w-[4rem] gap-4">
                   <SiTailwindcss className="text-4xl text-black hover:text-cyan-400 transition hover:scale-125" />
-                  <span className="scale-0 group-hover:scale-100 transition">
+                  <span className="text-black group-hover:text-cyan-400 transition">
                     Tailwind
                   </span>
                 </div>
                 <div className="group flex flex-col items-center min-w-[4rem] gap-4">
                   <SiVisualstudiocode className="text-4xl text-black hover:text-blue-500 transition hover:scale-125" />
-                  <span className="scale-0 group-hover:scale-100 transition">
+                  <span className="text-black group-hover:text-blue-500 transition">
                     VSC
                   </span>
                 </div>
               </div>
             </div>
-            <h1 className="flex text-2xl justify-center md:text-left my-4 px-4 py-1 rounded-3xl bg-black text-white">
-              Sobre mi
-            </h1>
-            <p className="text-xl">
-              Tengo 34 años, mi lengua materna es el español y puedo manejarme
-              en ingles. Tengo un pasado en las artes plásticas pero di un
-              cambio a mi vida, ahora me dedico en cuerpo y alma a la
-              programación. Me encanta superar metas que encuentro dificiles al
-              principio, quiero mejorar mis habilidades en el front end ya que
-              soy adicto a ver con mis propios ojos en la pantalla las cosas que
-              construyo.
-            </p>
-          </div>
-          <div className="flex flex-col justify-between text-center lg:text-right p-4 m-4 rounded-3xl bg-slate-200 hover:bg-white transition duration-300 ">
-            <div className="group">
-              <span className="inline-block bg-black text-white text-center w-40 group-hover:bg-pink-50 group-hover:w-full px-4 py-1 rounded-3xl transition-all duration-300">
-                Paises
-              </span>
-              <div className="flex flex-col sm:flex-row scale-0 justify-center group-hover:scale-100 transition px-4 py-2 my-2 gap-4 bg-greenPro-50 rounded-xl">
-                <div>
-                  <span className="font-semibold">Argentina</span> 1988-2002
-                </div>
-                <div>
-                  <span className="font-semibold">Israel</span> 2002-2004
-                </div>
-                <div>
-                  <span className="font-semibold">España</span> 2019
-                </div>
-              </div>
+            <div className="flex flex-col  lg:max-w-2xl">
+              <h1 className="flex text-4xl justify-center font-Oswald mb-12 px-4">
+                SOBRE MI
+              </h1>
+              <p className="text-xl text-justify">
+                Tengo 34 años, mi lengua materna es el español y puedo manejarme
+                en ingles. Tengo un pasado en las artes plásticas pero di un
+                cambio a mi vida, ahora me dedico en cuerpo y alma a la
+                programación. Me encanta superar metas que encuentro dificiles
+                al principio, quiero mejorar mis habilidades en el Front-End ya
+                que soy adicto a ver con mis propios ojos en la pantalla las
+                cosas que construyo.
+              </p>
             </div>
+          </div>
 
-            <div className="group">
-              <span className="inline-block bg-black text-white text-center w-40 group-hover:bg-pink-50 group-hover:w-full px-4 py-1 rounded-3xl transition-all duration-300">
-                Libro favorito
+          <div className="flex flex-col sm:flex-row justify-between text-center lg:text-right mt-40 rounded-3xl px-16 sm:p-0 gap-8 transition duration-300">
+            <div className="group flex-1 bg-greenPro-100 rounded-xl p-4">
+              <span className="font-Oswald text-lg tracking-wide">
+                LIBRO FAVORITO
               </span>
-              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition px-4 py-2 my-2 bg-greenPro-50 rounded-xl">
+              <div className="flex flex-col pt-2 border-stone-300">
                 <span>Archivo de las tormentas - saga</span>
               </div>
             </div>
-            <div className="group">
-              <span className="inline-block bg-black text-white text-center w-40 group-hover:bg-pink-50 group-hover:w-full px-4 py-1 rounded-3xl transition-all duration-300">
-                Serie favorita
-              </span>
-              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition px-4 py-2 my-2 bg-greenPro-50 rounded-xl">
-                <span>Full metal alchemist: Brotherhood</span>
+            <div className="group flex-1 bg-greenPro-100 rounded-xl p-4 group perspective">
+              <div className="flex flex-1 flex-col border-stone-300 relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+                <div className="flex flex-col absolute backface-hidden w-full-h-full">
+                  <span className="font-Oswald text-lg tracking-wide">
+                    SERIE FAVORITA
+                  </span>
+                  <span>Full metal alchemist: Brotherhood</span>
+                </div>
+                <div className="flex h-full absoolute my-rotate-y-180 backface-hidden">
+                  <img
+                    src="images/materu.png"
+                    alt="full metal"
+                    className="object-center w-full object-cover rounded-3xl"
+                  ></img>
+                </div>
               </div>
             </div>
 
-            <div className="group">
-              <span className="inline-block bg-black text-white text-center w-40 group-hover:bg-pink-50 group-hover:w-full px-4 py-1 rounded-3xl transition-all duration-300">
-                Juego favorito
+            <div className="group flex-1 bg-greenPro-100 rounded-xl p-4">
+              <span className="font-Oswald text-lg tracking-wide">
+                JUEGO FAVORITO
               </span>
-              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition px-4 py-2 my-2 bg-greenPro-50 rounded-xl">
+              <div className="flex flex-col pt-2 border-stone-300">
                 <span>The last of us 2</span>
               </div>
             </div>
-            <div className="group">
-              <span className="inline-block bg-black text-white text-center w-40 group-hover:bg-pink-50 group-hover:w-full px-4 py-1 rounded-3xl transition-all duration-300">
-                Arte
-              </span>
-              <div className="flex flex-col scale-0 text-center group-hover:scale-100 transition px-4 py-2 my-2 bg-greenPro-50 rounded-xl">
+            <div className="group flex-1 bg-greenPro-100 rounded-xl p-4">
+              <span className="font-Oswald text-lg tracking-wide">ARTE</span>
+              <div className="flex flex-col pt-2 border-stone-300">
                 <span>Licenciado en Bellas Artes</span>
               </div>
             </div>
@@ -304,7 +299,7 @@ function App() {
         </div>
       </Section>
       <Section id="contact" className=" bg-black">
-        <h1 className="text-4xl mt-28 text-center text-white mb-8 font-Oswald">
+        <h1 className="text-4xl mt-28 text-center text-white mb-8">
           Ponte en contacto conmigo
         </h1>
         <div className="flex flex-col justify-center my-16 mx-auto max-w-[30rem] text-center text-white py-4 px-8   bg-gray-900 rounded-xl">
