@@ -13,6 +13,7 @@ import {
   SiTailwindcss,
   SiCss3,
 } from "react-icons/si";
+import { FaMusic } from "react-icons/fa";
 import { useState } from "react";
 
 function Section({ children, id, className }) {
@@ -254,81 +255,93 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-between text-center lg:text-right mt-40 rounded-3xl px-16 sm:p-0 gap-8 transition duration-300">
-            <div className="group flex-1 rounded-xl group perspective">
-              <div className="flex flex-col border-stone-300 relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-                <div className="flex flex-col absolute backface-hidden w-full-h-full rounded-xl bg-greenPro-100 p-4">
+          <div className="flex flex-col sm:flex-row justify-between text-center lg:text-right mt-40 rounded-3xl   p-16 sm:p-0 gap-8 transition duration-300">
+            <div className="group flex-1 rounded-xl perspective">
+              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl border-2 border-white text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
                     LIBRO FAVORITO
                   </span>
-                  <div className="flex flex-col pt-2 ">
+                  <div className="flex flex-col pt-2">
                     <span>Archivo de las tormentas - saga</span>
                   </div>
                 </div>
-                <div className="flex flex-1 absoolute my-rotate-y-180 backface-hidden">
+                <div className="absoolute h-40 flex my-rotate-y-180 backface-hidden">
+                  <span className="absolute flex justify-center align-middle items-center text-center md:text-xl italic h-full p-4 text-white">
+                    “Esta frase es algo que dice un personaje en un momento...”
+                  </span>
                   <img
                     src="images/archivo.jpeg"
                     alt="full metal"
-                    className="object-center w-full object-cover rounded-xl"
+                    className="object-center object-cover w-full rounded-xl"
                   ></img>
                 </div>
               </div>
             </div>
-            <div className="group flex-1 rounded-xl group perspective">
-              <div className="flex flex-col border-stone-300 relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-                <div className="flex flex-col absolute backface-hidden w-full-h-full rounded-xl bg-greenPro-100 p-4">
+            <div className="group flex-1 rounded-xl perspective">
+              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl border-2 border-white text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
                     SERIE FAVORITA
                   </span>
-                  <div className="flex flex-col pt-2 ">
+                  <div className="flex flex-col pt-2">
                     <span>Full metal alchemist: Brotherhood</span>
                   </div>
                 </div>
-                <div className="flex flex-1 absoolute my-rotate-y-180 backface-hidden">
+                <div className="absoolute h-40 flex my-rotate-y-180 backface-hidden">
+                  <span className="absolute flex justify-center align-middle items-center text-center md:text-xl italic w-full h-full p-4 text-white">
+                    “Materu Arphonsu!”
+                  </span>
                   <img
                     src="images/materu.png"
                     alt="full metal"
-                    className="object-center w-full object-cover rounded-xl"
+                    className="object-center object-cover w-full rounded-xl"
                   ></img>
                 </div>
               </div>
             </div>
-
-            <div className="group flex-1 rounded-xl group perspective">
-              <div className="flex flex-col border-stone-300 relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-                <div className="flex flex-col absolute backface-hidden w-full-h-full rounded-xl bg-greenPro-100 p-4">
+            <div className="group flex-1 rounded-xl perspective">
+              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl border-2 border-white text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
                     JUEGO FAVORITO
                   </span>
-                  <div className="flex flex-col pt-2 ">
+                  <div className="flex flex-col pt-2">
                     <span>The last of us 2</span>
                   </div>
                 </div>
-                <div className="flex flex-1 absoolute my-rotate-y-180 backface-hidden">
+                <div className="absoolute h-40 flex my-rotate-y-180 backface-hidden">
+                  <span className="absolute flex flex-col justify-center align-middle items-center text-center md:text-xl italic w-full h-full p-4 text-white">
+                    Take me on
+                    <FaMusic />
+                  </span>
                   <img
                     src="images/tlou2.jpg"
                     alt="full metal"
-                    className="object-center w-full object-cover rounded-xl"
+                    className="object-center object-cover w-full rounded-xl"
                   ></img>
                 </div>
               </div>
             </div>
-
-            <div className="group flex-1 rounded-xl group perspective">
-              <div className="flex flex-col border-stone-300 relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-                <div className="flex flex-col absolute backface-hidden w-full-h-full rounded-xl bg-greenPro-100 p-4">
+            <div className="group flex-1 rounded-xl perspective">
+              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl border-2 border-white text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
                     ARTE
                   </span>
-                  <div className="flex flex-col pt-2 ">
-                    <span>Licenciado en Bellas Artes</span>
+                  <div className="flex flex-col pt-2">
+                    <span>Licenciado en bellas artes</span>
                   </div>
                 </div>
-                <div className="flex flex-1 absoolute my-rotate-y-180 backface-hidden">
+                <div className="absoolute h-40 flex my-rotate-y-180 backface-hidden">
+                  <span className="absolute flex flex-col justify-center align-middle items-center text-center md:text-xl italic w-full h-full p-4 text-white">
+                    Dibujo, pintura y escultura.
+                    <FaMusic />
+                  </span>
                   <img
                     src="images/tlou2.jpg"
                     alt="full metal"
-                    className="object-center w-full object-cover rounded-xl"
+                    className="object-center object-cover w-full rounded-xl"
                   ></img>
                 </div>
               </div>
