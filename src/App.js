@@ -3,8 +3,12 @@ import "aos/dist/aos.css";
 import "./App.css";
 import Aos from "aos";
 import { Buttons } from "./components/Buttons";
+import { Slider } from "./components/Slider";
 import emailjs from "emailjs-com";
-
+// import {
+//   IoIosArrowDropleftCircle,
+//   IoIosArrowDroprightCircle,
+// } from "react-icons/io";
 import {
   SiReact,
   SiHtml5,
@@ -34,7 +38,7 @@ function Article({ children, reverse = false }) {
     <article
       className={`flex flex-col gap-8 max-w-[80rem] ${
         reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-      } mb-12`}
+      } mb-24`}
     >
       {children}
     </article>
@@ -116,16 +120,10 @@ function App() {
           </h2>
 
           <Article>
-            <div data-aos="fade-in" className="flex min-w-[16rem]">
-              <img
-                src="images/shopbix2.png"
-                alt="shopbix"
-                className="w-full object-top object-cover rounded-3xl"
-              ></img>
-            </div>
+            <Slider project={"shopbix"} imageFormat={"png"} />
             <div className="flex flex-col justify-center w-full">
               <h2 className="text-3xl text-center font-Oswald">Shopbix</h2>
-              <p className="text-justify text-xl my-4">
+              <p className="text-left text-xl my-4">
                 Carrito de compras con las características de agregar y borrar
                 ítems, sección de pago donde es posible añadir medios de pago.
               </p>
@@ -136,15 +134,11 @@ function App() {
           </Article>
           <Article reverse>
             <div data-aos="fade-in" className="flex min-w-[20rem] ">
-              <img
-                src="images/shopbix2.png"
-                alt="shopbix"
-                className="w-full object-top object-cover rounded-3xl"
-              ></img>
+              <Slider project={"foodubix"} imageFormat={"png"} />
             </div>
             <div className="flex w-full flex-col justify-center">
               <h2 className="text-3xl text-center font-Oswald">Foodubix</h2>
-              <p className="text-justify text-xl my-4">
+              <p className="text-left text-xl my-4">
                 Esta app permite al usuario buscar entre miles de recetas por
                 ingredientes o de manera aleatoria y mostrando en pantalla los
                 diferentes platos de forma visualmente atractiva y ordenada.
@@ -155,16 +149,12 @@ function App() {
             </div>
           </Article>
           <Article>
-            <div data-aos="fade-in" className="flex min-w-[20rem] ">
-              <img
-                src="images/shopbix2.png"
-                alt="movienotes"
-                className="w-full object-top object-cover rounded-3xl"
-              ></img>
+            <div data-aos="fade-in" className="flex min-w-[20rem]">
+              <Slider project={"movie-note-app"} imageFormat={"png"} />
             </div>
             <div className="flex w-full flex-col justify-center">
               <h2 className="text-3xl text-center font-Oswald">Media-notes</h2>
-              <p className="text-justify text-xl my-4">
+              <p className="text-left text-xl my-4">
                 Una app que permite guardar en local storage anotaciones y
                 puntuaciones de la ultima serie que viste o el ultimo libro que
                 leiste. Opción de borrar o editar cualquiera de las entradas con
@@ -177,15 +167,11 @@ function App() {
           </Article>
           <Article reverse>
             <div data-aos="fade-in" className="flex min-w-[20rem] mb-14">
-              <img
-                src="images/shopbix2.png"
-                alt="pokeapp"
-                className="w-full object-top object-cover rounded-3xl"
-              ></img>
+              <Slider project={"pokedex-app"} imageFormat={"png"} />
             </div>
             <div className="flex w-full flex-col justify-center">
               <h2 className="text-3xl text-center font-Oswald">PokeApp</h2>
-              <p className="text-justify text-xl my-4">
+              <p className="text-left text-xl my-4">
                 My versión de la querida API abierta de pokemon, hace consultas
                 y muestra informacón en un modal.
               </p>
@@ -246,7 +232,7 @@ function App() {
               <h2 className="flex text-4xl justify-center font-Oswald mb-12 px-4">
                 SOBRE MI
               </h2>
-              <p className="text-xl text-justify">
+              <p className="text-xl text-left">
                 Tengo 34 años, mi lengua materna es el español y puedo manejarme
                 en ingles. Tengo un pasado en las artes plásticas pero di un
                 cambio a mi vida, ahora me dedico en cuerpo y alma a la
