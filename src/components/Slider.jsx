@@ -19,12 +19,12 @@ export function Slider({ project, imageFormat }) {
     });
   };
 
-  //   useEffect(() => {
-  //     const count = setInterval(() => {
-  //       manualSlide();
-  //     }, 5000);
-  //     return () => clearInterval(count);
-  //   }, []);
+  useEffect(() => {
+    const count = setInterval(() => {
+      manualSlide();
+    }, 5000);
+    return () => clearInterval(count);
+  }, []);
 
   return (
     <div
