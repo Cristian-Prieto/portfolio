@@ -9,17 +9,17 @@ export function NavBar() {
   };
   return (
     <nav
-      className={`flex fixed top-0 h-20 w-full justify-center text-xl z-10 bg-black text-white ${
-        isOpen && "flex-col h-screen items-center justify-center"
-      }`}
+      className={`flex fixed top-0 h-20 w-full text-xl z-10 bg-black ${
+        isOpen && "flex-col h-screen"
+      } sm:justify-center transition-all duration-1000 text-white`}
     >
-      <button onClick={toggleMenu} className="sm:hidden mb-auto">
+      <button onClick={toggleMenu} className="sm:hidden h-20 p-4">
         <Hamburger />
       </button>
 
       <ul
-        className={`sm:h-auto sm:flex items-center justify-center list-none gap-12 ${
-          isOpen ? "flex-col mb-auto" : "hidden"
+        className={`sm:flex items-center list-none gap-12 ${
+          isOpen ? "flex-col text-left my-auto p-8 space-y-12" : "hidden"
         } bg-black`}
       >
         <li>
