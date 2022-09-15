@@ -44,15 +44,6 @@ export function Slider({ project, imageFormat }) {
         alt="shopbix"
         className="w-full object-top object-cover rounded-3xl"
       ></img>
-
-      {/* <Slider project={"shopbix"} imageFormat={"png"} /> */}
     </div>
-
-    // <img
-    //   onClick={manualSlide}
-    //   src={`images/${project}/${project}${imageSpotLight}.${imageFormat}`}
-    //   alt="shopbix"
-    //   className="w-full object-top object-cover rounded-3xl"
-    // ></img>
   );
 }

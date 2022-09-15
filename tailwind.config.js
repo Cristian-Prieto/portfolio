@@ -27,12 +27,19 @@ module.exports = {
     },
     extend: {
       colors: {
-        purple: {
-          50: "#541690",
+        whitePro: {
+          50: "#fafafa",
         },
-        pink: {
+        purplePro: {
+          50: "#654062",
+          100: "#300532",
+        },
+        pinkPro: {
           50: "#FF0075",
-          100: "#721B65",
+          100: "#AA3763",
+        },
+        bluePro: {
+          50: "#2D4263",
         },
         greenPro: {
           50: "#59CE8F",
@@ -40,6 +47,10 @@ module.exports = {
         },
         whitePro: {
           50: "#E8F9FD",
+        },
+        beige: {
+          50: "#EEE3CB",
+          100: "#85586F",
         },
       },
     },

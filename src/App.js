@@ -5,10 +5,8 @@ import Aos from "aos";
 import { Buttons } from "./components/Buttons";
 import { Slider } from "./components/Slider";
 import emailjs from "emailjs-com";
-// import {
-//   IoIosArrowDropleftCircle,
-//   IoIosArrowDroprightCircle,
-// } from "react-icons/io";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import toast, { Toaster } from "react-hot-toast";
 import {
   SiReact,
   SiHtml5,
@@ -16,8 +14,9 @@ import {
   SiVisualstudiocode,
   SiTailwindcss,
   SiCss3,
+  SiGithub,
 } from "react-icons/si";
-import { FaMusic } from "react-icons/fa";
+import { FaMusic, FaDownload, FaDiscord } from "react-icons/fa";
 import { useState } from "react";
 
 function Section({ children, id, className }) {
@@ -38,12 +37,14 @@ function Article({ children, reverse = false }) {
     <article
       className={`flex flex-col gap-8 max-w-[80rem] ${
         reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-      } mb-24`}
+      } mb-24 text-beige-50`}
     >
       {children}
     </article>
   );
 }
+
+const alert = (mesage) => toast(mesage, { position: "bottom-right" });
 
 function App() {
   const [sendValue, setSendValue] = useState("Send");
@@ -64,56 +65,70 @@ function App() {
       .then(setSendValue("Sended!"));
 
     setTimeout(() => {
+      alert("Mail enviado! 👍🏼");
       setSendValue("Send");
     }, 2000);
     event.target.reset();
   };
 
-  // const [extraInfo, setExtraInfo] = useState("0");
-
-  // const showExtra = () => {
-  //   extraInfo === "0" ? setExtraInfo("100") : setExtraInfo("0");
-  // };
   Aos.init({ easing: "ease-in" });
   return (
     <div className="font-roboto">
       <NavBar />
       <Section
         id="home"
-        className="justify-center items-center bg-whitePro-50 mt-20"
+        className="justify-center items-center mt-20 bg-beige-50"
       >
-        <div className="flex flex-col justify-center items-center max-w-7xl">
-          <h1 className="flex flex-col font-Oswald">
-            <div className="flex flex-col text-left">
-              <span className="text-4xl">Hola!</span>
+        <div className="flex flex-col items-center max-w-7xl">
+          <h1 className="flex flex-col font-Oswald text-left">
+            <div className="flex align-bottom text-5xl gap-2">
+              <span className="">Hola!</span>
+              <span>soy</span>
             </div>
-            <div className="flex flex-col">
-              <div className="sm:flex pl-10">
-                <span
-                  className=" 
-               text-5xl font-roboto text-right"
-                >
-                  soy
-                </span>
-                <span data-aos="fade-left" className="flex text-black text-6xl">
-                  CRISTIAN PRIETO
-                </span>
-              </div>
-
-              <span className="text-2xl text-right font-roboto">
+            <div className="flex flex-col gap-2 mb-4">
+              <span
+                data-aos="fade-left"
+                className="flex text-black sm:text-7xl text-5xl font-bold"
+              >
+                Cristian Prieto,
+              </span>
+              <span className="text-3xl text-right font-roboto">
                 Desarrollador Front-End.
               </span>
+            </div>
+            <div className="flex font-roboto justify-center gap-8">
+              <a
+                href="https://github.com/Cristian-Prieto"
+                rel="noopener noreferrer"
+                target="_blank"
+                className=" py-1 px-2 rounded-md bg-black text-white hover:bg-bluePro-50 hover:text-beige-50 transition duration-300"
+              >
+                <div className="flex items-center gap-2">
+                  <SiGithub />
+                  <span>Github</span>
+                </div>
+              </a>
+              <a
+                href="Cristian-Prieto_CV-ESP.pdf"
+                download="Cristian-Prieto_CV-ESP.pdf"
+                className=" py-1 px-2 rounded-md bg-black text-white hover:bg-bluePro-50 hover:text-beige-50 transition duration-300"
+              >
+                <div className="flex items-center gap-2">
+                  <FaDownload />
+                  <span>Download CV</span>
+                </div>
+              </a>
             </div>
           </h1>
         </div>
       </Section>
       <Section
         id="projects"
-        className="justify-center items-center bg-greenPro-50"
+        className="justify-center items-center bg-bluePro-50"
       >
         <div className="flex flex-col justify-center items-center mt-24 gap-4">
           <h2
-            className="text-4xl text-center sm:text-right mb-14 font-Oswald"
+            className="text-4xl text-center sm:text-right mb-14 font-Oswald text-beige-50"
             //  data-aos="zoom-out" data-aos-duration="1000">
           >
             PROYECTOS
@@ -166,7 +181,7 @@ function App() {
             </div>
           </Article>
           <Article reverse>
-            <div data-aos="fade-in" className="flex min-w-[20rem] mb-14">
+            <div data-aos="fade-in" className="flex min-w-[20rem]">
               <Slider project={"pokedex-app"} imageFormat={"png"} />
             </div>
             <div className="flex w-full flex-col justify-center">
@@ -182,7 +197,7 @@ function App() {
           </Article>
         </div>
       </Section>
-      <Section id="skills" className="bg-whitePro-50">
+      <Section id="skills" className="">
         <div className="flex flex-col justify-between my-24 max-w-[80rem]">
           <div className="flex flex-col lg:flex-row justify-between gap-16">
             <div className="flex flex-col items-center mb-4">
@@ -244,7 +259,7 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-between text-center lg:text-right mt-40 rounded-3xl   p-16 sm:p-0 gap-8 transition duration-300">
+          <div className="flex flex-col sm:flex-row justify-between text-center lg:text-right mt-12 md:mt-40 rounded-3xl p-16 sm:p-0 gap-8 transition duration-300">
             <div className="group flex-1 rounded-xl perspective scale-100 hover:scale-110 transition duration-500">
               <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
                 <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl border-2 border-white text-white bg-black">
@@ -338,13 +353,22 @@ function App() {
         </div>
       </Section>
       <Section id="contact" className=" bg-black">
-        <h2 className="text-4xl mt-28 text-center text-white mb-8">
-          Ponte en contacto conmigo
+        <h2 className="text-4xl font-Oswald mt-28 text-center text-white mb-8">
+          Contáctame
         </h2>
-        <div className="flex flex-col justify-center my-16 mx-auto max-w-[30rem] text-center text-white py-4 px-8   bg-gray-900 rounded-xl">
-          <span className="mb-4">
-            Me pondré en contacto contigo apenas sea posible
-          </span>
+        <div className="flex flex-col justify-center my-16 mx-auto max-w-[30rem] text-center text-white py-4 px-8 rounded-xl">
+          <div className="flex justify-center">
+            <CopyToClipboard text="cubix88#1780">
+              <div onClick={() => alert("Id en portapapeles 👍🏼")}>
+                <span className="flex text-md items-center gap-4 P-2 cursor-pointer text-white">
+                  Háblame por Discord
+                  <FaDiscord className="text-2xl" />
+                </span>
+              </div>
+            </CopyToClipboard>
+            <Toaster />
+          </div>
+          o<span className="mb-4">Enviame un Email</span>
           <form
             onSubmit={sendEmail}
             className="flex flex-col flex-1 gap-4 text-black"
@@ -365,15 +389,6 @@ function App() {
                 placeholder="Dirección de correos válida"
                 required
                 className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300 valid:bg-slate-700"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="subject"
-                placeholder="Motivo del mensaje"
-                required
-                className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300"
               />
             </div>
             <div>
