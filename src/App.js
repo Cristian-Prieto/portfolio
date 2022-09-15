@@ -92,7 +92,7 @@ function App() {
               >
                 Cristian Prieto,
               </span>
-              <span className="text-3xl text-right font-roboto">
+              <span className="text-xl sm:text-3xl text-right font-roboto">
                 Desarrollador Front-End.
               </span>
             </div>
@@ -128,7 +128,7 @@ function App() {
       >
         <div className="flex flex-col justify-center items-center mt-24 gap-4">
           <h2
-            className="text-4xl text-center sm:text-right mb-14 font-Oswald text-beige-50"
+            className="text-4xl text-center sm:text-right mb-14 font-Oswald"
             //  data-aos="zoom-out" data-aos-duration="1000">
           >
             PROYECTOS
@@ -262,7 +262,7 @@ function App() {
           <div className="flex flex-col sm:flex-row justify-between text-center lg:text-right mt-12 md:mt-40 rounded-3xl p-16 sm:p-0 gap-8 transition duration-300">
             <div className="group flex-1 rounded-xl perspective scale-100 hover:scale-110 transition duration-500">
               <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
-                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl border-2 border-white text-white bg-black">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
                     LIBRO FAVORITO
                   </span>
@@ -284,7 +284,7 @@ function App() {
             </div>
             <div className="group flex-1 rounded-xl perspective scale-100 hover:scale-110 transition duration-500">
               <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
-                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl border-2 border-white text-white bg-black">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
                     SERIE FAVORITA
                   </span>
@@ -306,7 +306,7 @@ function App() {
             </div>
             <div className="group flex-1 rounded-xl perspective scale-100 hover:scale-110 transition duration-500">
               <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
-                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl border-2 border-white text-white bg-black">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
                     JUEGO FAVORITO
                   </span>
@@ -329,7 +329,7 @@ function App() {
             </div>
             <div className="group flex-1 rounded-xl perspective scale-100 hover:scale-110 transition duration-500">
               <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
-                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl border-2 border-white text-white bg-black">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
                     ARTE
                   </span>
