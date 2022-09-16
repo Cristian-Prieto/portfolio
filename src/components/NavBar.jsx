@@ -10,6 +10,12 @@ export function NavBar() {
     setisOpen((prevState) => !prevState);
   };
 
+  const translate = () => {
+    i18n.language === "es"
+      ? i18n.changeLanguage("en")
+      : i18n.changeLanguage("es");
+  };
+
   useEffect(() => {
     // if (isOpen) {
     //   document.body.style = "overflow: hidden;";
@@ -99,7 +105,7 @@ export function NavBar() {
             type="checkbox"
             id="toggleLang"
             className="sr-only peer h-4 w-8 rounded-full"
-            onClick={() => i18n.changeLanguage("en")}
+            onClick={translate}
           />
           <span className="absolute h-full w-1/2 left-0 top-0 bg-bluePro-50 border-2 border-white peer-checked:left-6 rounded-full transition-all duration-300"></span>
         </label>

@@ -4,5 +4,11 @@
     "projects": "PROYECTOS",
     "skills": "HABILIDADES",
     "contact": "CONTACTO"
+  },
+  "home-section": {
+    "hi": "Hola!",
+    "i am": "soy",
+    "subtittle": "desarrollador Front-End",
+    "download": "Descargar CV"
   }
 }

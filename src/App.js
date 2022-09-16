@@ -53,7 +53,7 @@ const alert = (mesage) =>
   });
 
 function App() {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const [sendValue, setSendValue] = useState("Send");
 
   const sendEmail = (event) => {
@@ -89,8 +89,8 @@ function App() {
         <div className="flex flex-col items-center max-w-7xl">
           <h1 className="flex flex-col font-Oswald text-left">
             <div className="flex align-bottom text-5xl gap-2">
-              <span className="">Hola!</span>
-              <span>soy</span>
+              <span className="">{t("home-section.hi")}</span>
+              <span>{t("home-section.i am")}</span>
             </div>
             <div className="flex flex-col gap-2 mb-4">
               <span
@@ -100,7 +100,7 @@ function App() {
                 Cristian Prieto,
               </span>
               <span className="text-xl sm:text-3xl text-right font-roboto">
-                Desarrollador Front-End.
+                {t("home-section.subtittle")}.
               </span>
             </div>
             <div className="flex font-roboto justify-center gap-8">
@@ -122,7 +122,7 @@ function App() {
               >
                 <div className="flex items-center gap-2">
                   <FaDownload />
-                  <span>Download CV</span>
+                  <span>{t("home-section.download")}</span>
                 </div>
               </a>
             </div>
