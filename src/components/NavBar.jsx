@@ -1,7 +1,10 @@
 import { Link } from "react-scroll";
 import Hamburger from "hamburger-react";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 export function NavBar() {
+  const [t, i18n] = useTranslation("global");
   const [isOpen, setisOpen] = useState(false);
   const toggleMenu = () => {
     setisOpen((prevState) => !prevState);
@@ -18,16 +21,19 @@ export function NavBar() {
 
   return (
     <nav
-      className={`${
-        isOpen ? "flex flex-col" : ""
-      } flex fixed top-0 sm:h-20 w-full text-xl z-10 sm:justify-center text-white bg-black `}
+      className={`flex ${
+        isOpen ? "flex-col " : "flex-row"
+      } fixed items-center justify-center top-0 sm:h-20 w-full text-xl z-10 text-white bg-black `}
     >
-      <button onClick={toggleMenu} className="sm:hidden h-20 w-20 p-4">
+      <button
+        onClick={toggleMenu}
+        className={"sm:hidden h-20 w-20 mr-auto p-4"}
+      >
         <Hamburger />
       </button>
 
       <ul
-        className={`sm:flex flex-col sm:flex-row  justify-center items-center font-Oswald tracking-wide list-none gap-12 ${
+        className={`sm:flex flex-col sm:flex-row   items-center lg:justify-center w-full font-Oswald tracking-wide list-none sm:gap-8 md:gap-12 p-4 ${
           isOpen
             ? "flex h-[calc(100vh-5rem)] my-auto p-8 space-y-12 sm:space-y-0"
             : "hidden"
@@ -42,7 +48,7 @@ export function NavBar() {
             duration={500}
             className="flex justify-center w-full cursor-pointer hover:text-beige-50 transition duration-300"
           >
-            HOME
+            {t("nav.home")}
           </Link>
         </li>
         <li className="cursor-pointer hover:text-beige-50 transition duration-300">
@@ -54,7 +60,7 @@ export function NavBar() {
             duration={500}
             className="flex w-full cursor-pointer hover:text-beige-50 transition duration-300"
           >
-            PROYECTOS
+            {t("nav.projects")}
           </Link>
         </li>
         <li className="cursor-pointer hover:text-beige-50 transition duration-300">
@@ -66,7 +72,7 @@ export function NavBar() {
             duration={500}
             className="flex w-full cursor-pointer hover:text-beige-50 transition duration-300"
           >
-            HABILIDADES
+            {t("nav.skills")}
           </Link>
         </li>
         <li className="cursor-pointer hover:text-beige-50 transition duration-300">
@@ -78,10 +84,27 @@ export function NavBar() {
             duration={500}
             className="flex w-full cursor-pointer hover:text-beige-50 transition duration-300"
           >
-            CONTACTO
+            {t("nav.contact")}
           </Link>
         </li>
       </ul>
+      <div className="absolute flex items-center h-20 right-0 top-0 p-6 gap-2 ">
+        <span className="sm:text-sm">ESP</span>
+        <label
+          htmlFor="toggleLang"
+          placeholder=""
+          className="relative cursor-pointer w-12 h-6 bg-white rounded-full"
+        >
+          <input
+            type="checkbox"
+            id="toggleLang"
+            className="sr-only peer h-4 w-8 rounded-full"
+            onClick={() => i18n.changeLanguage("en")}
+          />
+          <span className="absolute h-full w-1/2 left-0 top-0 bg-bluePro-50 border-2 border-white peer-checked:left-6 rounded-full transition-all duration-300"></span>
+        </label>
+        <span className="sm:text-sm opacity-50">ENG</span>
+      </div>
     </nav>
   );
 }

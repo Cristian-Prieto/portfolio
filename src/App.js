@@ -1,9 +1,12 @@
 import { NavBar } from "./components/NavBar";
 import "aos/dist/aos.css";
 import "./App.css";
+import { useState } from "react";
 import Aos from "aos";
 import { Buttons } from "./components/Buttons";
 import { Slider } from "./components/Slider";
+//this is the translator
+import { useTranslation } from "react-i18next";
 import emailjs from "emailjs-com";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import toast, { Toaster } from "react-hot-toast";
@@ -17,7 +20,6 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { FaMusic, FaDownload, FaDiscord } from "react-icons/fa";
-import { useState } from "react";
 
 function Section({ children, id, className }) {
   return (
@@ -51,6 +53,7 @@ const alert = (mesage) =>
   });
 
 function App() {
+  const [t, i18n] = useTranslation("global");
   const [sendValue, setSendValue] = useState("Send");
 
   const sendEmail = (event) => {
