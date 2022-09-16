@@ -44,7 +44,11 @@ function Article({ children, reverse = false }) {
   );
 }
 
-const alert = (mesage) => toast(mesage, { position: "bottom-right" });
+const alert = (mesage) =>
+  toast(mesage, {
+    position: "bottom-right",
+    borderRadius: "10px",
+  });
 
 function App() {
   const [sendValue, setSendValue] = useState("Send");
