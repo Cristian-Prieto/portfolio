@@ -43,6 +43,7 @@
     "placeholder-1": "Tu nombre completo",
     "placeholder-2": "Dirección de correos válida",
     "placeholder-3": "Tu mensaje",
-    "btn": "Enviar"
+    "btn": "Enviar",
+    "btn-succes": "Enviado!"
   }
 }

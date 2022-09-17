@@ -43,6 +43,7 @@
     "placeholder-1": "Your full name",
     "placeholder-2": "Valid email adress",
     "placeholder-3": "Your message",
-    "btn": "Send"
+    "btn": "Send",
+    "btn-succes": "Sended"
   }
 }
