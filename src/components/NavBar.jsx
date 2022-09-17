@@ -95,7 +95,13 @@ export function NavBar() {
         </li>
       </ul>
       <div className="absolute flex items-center h-20 right-0 top-0 p-6 gap-2 ">
-        <span className="sm:text-sm">ESP</span>
+        <span
+          className={`sm:text-sm ${
+            i18n.language === "es" ? "opacity-100" : "opacity-50"
+          } transition duration-300`}
+        >
+          ESP
+        </span>
         <label
           htmlFor="toggleLang"
           placeholder=""
@@ -109,7 +115,13 @@ export function NavBar() {
           />
           <span className="absolute h-full w-1/2 left-0 top-0 bg-bluePro-50 border-2 border-white peer-checked:left-6 rounded-full transition-all duration-300"></span>
         </label>
-        <span className="sm:text-sm opacity-50">ENG</span>
+        <span
+          className={`sm:text-sm ${
+            i18n.language === "en" ? "opacity-100" : "opacity-50"
+          } transition duration-300`}
+        >
+          ENG
+        </span>
       </div>
     </nav>
   );

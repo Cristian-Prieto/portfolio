@@ -5,7 +5,6 @@ import { useState } from "react";
 import Aos from "aos";
 import { Buttons } from "./components/Buttons";
 import { Slider } from "./components/Slider";
-//this is the translator
 import { useTranslation } from "react-i18next";
 import emailjs from "emailjs-com";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -135,10 +134,10 @@ function App() {
       >
         <div className="flex flex-col justify-center items-center mt-24 gap-4">
           <h2
-            className="text-4xl text-center sm:text-right mb-14 font-Oswald"
+            className="text-4xl text-center sm:text-right text-beige-50 mb-14 font-Oswald"
             //  data-aos="zoom-out" data-aos-duration="1000">
           >
-            PROYECTOS
+            {t("projects.tittle")}
           </h2>
 
           <Article>
@@ -146,8 +145,7 @@ function App() {
             <div className="flex flex-col justify-center w-full">
               <h2 className="text-3xl text-center font-Oswald">Shopbix</h2>
               <p className="text-left text-xl my-4">
-                Carrito de compras con las características de agregar y borrar
-                ítems, sección de pago donde es posible añadir medios de pago.
+                {t("projects.description-1")}
               </p>
               <div>
                 <Buttons project={"shopbix"} />
@@ -161,9 +159,7 @@ function App() {
             <div className="flex w-full flex-col justify-center">
               <h2 className="text-3xl text-center font-Oswald">Foodubix</h2>
               <p className="text-left text-xl my-4">
-                Esta app permite al usuario buscar entre miles de recetas por
-                ingredientes o de manera aleatoria y mostrando en pantalla los
-                diferentes platos de forma visualmente atractiva y ordenada.
+                {t("projects.description-2")}
               </p>
               <div className="">
                 <Buttons project={"foodubix"} />
@@ -177,10 +173,7 @@ function App() {
             <div className="flex w-full flex-col justify-center">
               <h2 className="text-3xl text-center font-Oswald">Media-notes</h2>
               <p className="text-left text-xl my-4">
-                Una app que permite guardar en local storage anotaciones y
-                puntuaciones de la ultima serie que viste o el ultimo libro que
-                leiste. Opción de borrar o editar cualquiera de las entradas con
-                un diseño responsive.
+                {t("projects.description-3")}
               </p>
               <div className="">
                 <Buttons project={"movie-note-app"} />
@@ -194,8 +187,7 @@ function App() {
             <div className="flex w-full flex-col justify-center">
               <h2 className="text-3xl text-center font-Oswald">PokeApp</h2>
               <p className="text-left text-xl my-4">
-                My versión de la querida API abierta de pokemon, hace consultas
-                y muestra informacón en un modal.
+                {t("projects.description-4")}
               </p>
               <div className="">
                 <Buttons project={"pokedex-app"} />
@@ -209,7 +201,7 @@ function App() {
           <div className="flex flex-col lg:flex-row justify-between gap-16">
             <div className="flex flex-col items-center mb-4">
               <h2 className="flex font-Oswald text-4xl w-full justify-center md:text-lef mb-14">
-                HABILIDADES
+                {t("skills.tittle-1")}
               </h2>
               <div className="grid grid-cols-3 sm:flex justify-between sm:justify-center sm:gap-4 p-4 pt-0 border-b-2 border-neutral-800">
                 <div className="group flex flex-col items-center min-w-[4rem] gap-4">
@@ -252,17 +244,9 @@ function App() {
             </div>
             <div className="flex flex-col  lg:max-w-2xl">
               <h2 className="flex text-4xl justify-center font-Oswald mb-12 px-4">
-                SOBRE MI
+                {t("skills.tittle-2")}
               </h2>
-              <p className="text-xl text-left">
-                Tengo 34 años, mi lengua materna es el español y puedo manejarme
-                en ingles. Tengo un pasado en las artes plásticas pero di un
-                cambio a mi vida, ahora me dedico en cuerpo y alma a la
-                programación. Me encanta superar metas que encuentro dificiles
-                al principio, quiero mejorar mis habilidades en el Front-End ya
-                que soy adicto a ver con mis propios ojos en la pantalla las
-                cosas que construyo.
-              </p>
+              <p className="text-xl text-left">{t("skills.description")}</p>
             </div>
           </div>
 
@@ -271,15 +255,15 @@ function App() {
               <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
                 <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
-                    LIBRO FAVORITO
+                    {t("skills.card_1_front-tittle")}
                   </span>
                   <div className="flex flex-col pt-2">
-                    <span>Archivo de las tormentas - saga</span>
+                    <span>{t("skills.card_1_front-text")}</span>
                   </div>
                 </div>
                 <div className="absoolute h-40 flex my-rotate-y-180 backface-hidden">
                   <span className="absolute flex flex-col justify-center align-middle items-center text-center italic md:text-xl w-full h-full p-4 scale-75 group-hover:scale-100 transition delay-500 duration-1000 text-white">
-                    “Esta frase es algo que dice un personaje en un momento...”
+                    {t("skills.card_1-back")}
                   </span>
                   <img
                     src="images/archivo.jpeg"
@@ -293,15 +277,15 @@ function App() {
               <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
                 <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
-                    SERIE FAVORITA
+                    {t("skills.card_2_front-tittle")}
                   </span>
                   <div className="flex flex-col pt-2">
-                    <span>Full metal alchemist: Brotherhood</span>
+                    <span>{t("skills.card_2_front-text")}</span>
                   </div>
                 </div>
                 <div className="absoolute h-40 flex my-rotate-y-180 backface-hidden">
                   <span className="absolute flex flex-col justify-center align-middle items-center text-center italic md:text-xl w-full h-full p-4 scale-75 group-hover:scale-100 transition delay-500 duration-1000 text-white">
-                    “Materu Arphonsu!”
+                    “{t("skills.card_2-back")}”
                   </span>
                   <img
                     src="images/materu.png"
@@ -315,15 +299,15 @@ function App() {
               <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
                 <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
-                    JUEGO FAVORITO
+                    {t("skills.card_3_front-tittle")}
                   </span>
                   <div className="flex flex-col pt-2">
-                    <span>The last of us 2</span>
+                    <span>{t("skills.card_3_front-text")}</span>
                   </div>
                 </div>
                 <div className="absoolute h-40 flex my-rotate-y-180 backface-hidden">
                   <span className="absolute flex flex-col justify-center align-middle items-center text-center italic md:text-xl w-full h-full p-4 scale-75 group-hover:scale-100 transition delay-500 duration-1000 text-white">
-                    Take me on
+                    {t("skills.card_3-back")}
                     <FaMusic />
                   </span>
                   <img
@@ -338,15 +322,15 @@ function App() {
               <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
                 <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
                   <span className="font-Oswald text-lg tracking-wide">
-                    ARTE
+                    {t("skills.card_3_front-tittle")}
                   </span>
                   <div className="flex flex-col pt-2">
-                    <span>Licenciado en bellas artes</span>
+                    <span>{t("skills.card_4_front-text")}</span>
                   </div>
                 </div>
                 <div className="absoolute h-40 flex my-rotate-y-180 backface-hidden">
                   <span className="absolute flex flex-col justify-center align-middle items-center text-center italic md:text-xl w-full h-full p-4 scale-75 group-hover:scale-100 transition delay-500 duration-1000 text-white">
-                    Dibujo, pintura y escultura.
+                    {t("skills.card_4-back")}
                   </span>
                   <img
                     src="images/art.jpg"
@@ -361,21 +345,22 @@ function App() {
       </Section>
       <Section id="contact" className=" bg-black">
         <h2 className="text-4xl font-Oswald mt-28 text-center text-white mb-8">
-          Contáctame
+          {t("contact.tittle")}
         </h2>
         <div className="flex flex-col justify-center my-16 mx-auto max-w-[30rem] text-center text-white py-4 px-8 rounded-xl">
           <div className="flex justify-center">
             <CopyToClipboard text="cubix88#1780">
               <div onClick={() => alert("Id en portapapeles 👍🏼")}>
                 <span className="flex text-md items-center gap-4 P-2 cursor-pointer text-white">
-                  Háblame por Discord
+                  {t("contact.dc")}
                   <FaDiscord className="text-2xl" />
                 </span>
               </div>
             </CopyToClipboard>
             <Toaster />
           </div>
-          o<span className="mb-4">Enviame un Email</span>
+          {t("contact.or")}
+          <span className="mb-4"> {t("contact.email")}</span>
           <form
             onSubmit={sendEmail}
             className="flex flex-col flex-1 gap-4 text-black"
@@ -384,7 +369,7 @@ function App() {
               <input
                 type="text"
                 name="name"
-                placeholder="Tu nombre completo"
+                placeholder={t("contact.placeholder-1")}
                 required
                 className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300"
               />
@@ -393,7 +378,7 @@ function App() {
               <input
                 type="email"
                 name="email"
-                placeholder="Dirección de correos válida"
+                placeholder={t("contact.placeholder-2")}
                 required
                 className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300 valid:bg-slate-700"
               />
@@ -401,7 +386,7 @@ function App() {
             <div>
               <textarea
                 name="message"
-                placeholder="Tu mensaje"
+                placeholder={t("contact.placeholder-3")}
                 rows="6"
                 required
                 className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300"

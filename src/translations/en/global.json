@@ -10,5 +10,39 @@
     "i am": "I'm",
     "subtittle": "Front-End developer",
     "download": "Download CV"
+  },
+  "projects": {
+    "tittle": "PROJECTS",
+    "description-1": "Shopping cart with the features of adding and deleting items, payment section where it is possible to add several credit cards.",
+    "description-2": "This app allows the user to search among thousands of recipes by ingredients or randomly and showing the different dishes on the screen in a visually attractive and orderly way.",
+    "description-3": "App that allows you to save in local storage notes and scores of the last series you watched or the last book you read. Option to delete or edit any of the entries with a responsive design.",
+    "description-4": "My version of the beloved pokemon open API, fetch data and displays it in a modal."
+  },
+  "skills": {
+    "tittle-1": "SKILLS",
+    "tittle-2": "ABOUT ME",
+    "description": "I'm 34 years old, i speak native spanish and basic english. I studied art but changed my life, now I dedicate myself body and soul to coding. I love to overcome goals that seems to me tough at the beginning. I want to improve my skills in the Front-End since I'm addicted to creating and showing things on the screen.",
+    "card_1_front-tittle": "FAVOURITE BOOK",
+    "card_2_front-tittle": "FAVOURITE SHOW",
+    "card_3_front-tittle": "FAVOURITE GAME",
+    "card_4_front-tittle": "ART",
+    "card_1_front-text": "The stormlight archive - saga",
+    "card_2_front-text": "Full metal alchemist: Brotherhood",
+    "card_3_front-text": "The last of us 2",
+    "card_4_front-text": "Bachelor of fine arts",
+    "card_1-back": "Honor is dead, but i'll se what i can do...",
+    "card_2-back": "Materu Arphonsu!",
+    "card_3-back": "Take me on",
+    "card_4-back": "Drawing, sculpture and painting"
+  },
+  "contact": {
+    "tittle": "CONTACT ME",
+    "dc": "Talk to me on Discord",
+    "or": "or",
+    "email": "send me an email",
+    "placeholder-1": "Your full name",
+    "placeholder-2": "Valid email adress",
+    "placeholder-3": "Your message",
+    "btn": "Send"
   }
 }
