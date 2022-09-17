@@ -53,7 +53,7 @@ const alert = (mesage) =>
 
 function App() {
   const [t] = useTranslation("global");
-  const [sendValue, setSendValue] = useState("Send");
+  const [sendValue, setSendValue] = useState(t("contact.btn"));
 
   const sendEmail = (event) => {
     event.preventDefault();
@@ -68,11 +68,11 @@ function App() {
           console.log(error.text);
         }
       )
-      .then(setSendValue("Sended!"));
+      .then(setSendValue(t("contact.btn-succes")));
 
     setTimeout(() => {
-      alert("Mail enviado! 👍🏼");
-      setSendValue("Send");
+      alert("Email sended! 👍🏼");
+      setSendValue(t("contact.btn"));
     }, 2000);
     event.target.reset();
   };
@@ -395,7 +395,7 @@ function App() {
             <div>
               <input
                 type="submit"
-                value={sendValue}
+                value={t("contact.btn")}
                 className={`text-white rounded-md py-2 bg-red-500 w-full hover:bg-red-300 ${
                   sendValue === "Sended!"
                     ? "bg-green-200 pointer-events-none"
