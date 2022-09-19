@@ -33,10 +33,10 @@ export function Slider({ project, imageFormat }) {
     >
       <div className="absolute flex justify-between items-center w-full h-full p-4 opacity-0 group-hover:opacity-100 transition duration-300">
         <div onClick={backSlide}>
-          <IoIosArrowDropleftCircle className="flex w-full text-6xl md:text-7xl drop-shadow-xl scale-90 hover:scale-110 transition duration-300 text-white" />
+          <IoIosArrowDropleftCircle className="flex w-full text-6xl md:text-7xl drop-shadow-xl scale-90 hover:scale-110 transition duration-300 text-white hover:text-green-500" />
         </div>
         <div onClick={manualSlide}>
-          <IoIosArrowDroprightCircle className="flex w-full text-6xl md:text-7xl drop-shadow-xl scale-90 hover:scale-110 transition duration-300 text-white" />
+          <IoIosArrowDroprightCircle className="flex w-full text-6xl md:text-7xl drop-shadow-xl scale-90 hover:scale-110 transition duration-300 text-white hover:text-green-500" />
         </div>
       </div>
       <img

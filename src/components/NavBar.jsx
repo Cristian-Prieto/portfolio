@@ -39,7 +39,7 @@ export function NavBar() {
       </button>
 
       <ul
-        className={`sm:flex flex-col sm:flex-row   items-center lg:justify-center w-full font-Oswald tracking-wide list-none sm:gap-8 md:gap-12 p-4 ${
+        className={`sm:flex flex-col sm:flex-row items-center lg:justify-center w-full font-Oswald tracking-wide list-none sm:gap-8 md:gap-12 p-4 ${
           isOpen
             ? "flex h-[calc(100vh-5rem)] my-auto p-8 space-y-12 sm:space-y-0"
             : "hidden"
@@ -52,7 +52,7 @@ export function NavBar() {
             smooth={true}
             offset={-100}
             duration={500}
-            className="flex justify-center w-full cursor-pointer hover:text-beige-50 transition duration-300"
+            className="flex justify-center w-full cursor-pointer hover:text-green-500 transition duration-300"
           >
             {t("nav.home")}
           </Link>
@@ -64,7 +64,7 @@ export function NavBar() {
             smooth={true}
             offset={0}
             duration={500}
-            className="flex w-full cursor-pointer hover:text-beige-50 transition duration-300"
+            className="flex w-full cursor-pointer hover:text-green-500 transition duration-300"
           >
             {t("nav.projects")}
           </Link>
@@ -76,7 +76,7 @@ export function NavBar() {
             smooth={true}
             offset={0}
             duration={500}
-            className="flex w-full cursor-pointer hover:text-beige-50 transition duration-300"
+            className="flex w-full cursor-pointer hover:text-green-500 transition duration-300"
           >
             {t("nav.skills")}
           </Link>
@@ -88,7 +88,7 @@ export function NavBar() {
             smooth={true}
             offset={0}
             duration={500}
-            className="flex w-full cursor-pointer hover:text-beige-50 transition duration-300"
+            className="flex w-full cursor-pointer hover:text-green-500 transition duration-300"
           >
             {t("nav.contact")}
           </Link>
@@ -97,7 +97,7 @@ export function NavBar() {
       <div className="absolute flex items-center h-20 right-0 top-0 p-6 gap-2 ">
         <span
           className={`sm:text-sm ${
-            i18n.language === "es" ? "opacity-100" : "opacity-50"
+            i18n.language === "es" ? "opacity-100 text-green-500" : "opacity-50"
           } transition duration-300`}
         >
           ESP
@@ -117,7 +117,7 @@ export function NavBar() {
         </label>
         <span
           className={`sm:text-sm ${
-            i18n.language === "en" ? "opacity-100" : "opacity-50"
+            i18n.language === "en" ? "opacity-100 text-green-500" : "opacity-50"
           } transition duration-300`}
         >
           ENG

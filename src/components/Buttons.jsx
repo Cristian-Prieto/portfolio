@@ -10,7 +10,7 @@ export function Buttons({ project }) {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <FaCode className="text-3xl" />
+          <FaCode className="text-3xl hover:text-green-500 scale-100 hover:scale-110 transition-all duration-500" />
         </a>
       </button>
       <button className="">
@@ -19,7 +19,7 @@ export function Buttons({ project }) {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <TbWorld className="text-3xl" />
+          <TbWorld className="text-3xl hover:text-green-500 scale-100 hover:scale-110 transition-all duration-500" />
         </a>
       </button>
     </div>

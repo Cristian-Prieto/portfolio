@@ -20,8 +20,9 @@
   },
   "skills": {
     "tittle-1": "HABILIDADES",
-    "tittle-2": "SOBRE MI",
-    "description": "Tengo 34 años, mi lengua materna es el español y puedo manejarme en ingles. Tengo un pasado en las artes plásticas pero di un cambio a mi vida, ahora me dedico en cuerpo y alma a la programación. Me encanta superar metas que encuentro dificiles al principio, quiero mejorar mis habilidades en el Front-End ya que soy adicto a ver con mis propios ojos en la pantalla las cosas que construyo.",
+    "tittle-2": "SOBRE",
+    "tittle-3": "MI",
+    "description": "Tengo 34 años, mi lengua materna es el español y puedo manejarme en inglés. Tengo un pasado en las artes plásticas pero di un cambio a mi vida, ahora me dedico en cuerpo y alma a la programación. Me encanta superar metas que encuentro dificiles al principio, quiero mejorar mis habilidades en el Front-End ya que soy adicto a ver con mis propios ojos en la pantalla las cosas que construyo.",
     "card_1_front-tittle": "LIBROS FAVORITOS",
     "card_2_front-tittle": "SERIE FAVORITA",
     "card_3_front-tittle": "JUEGO FAVORITO",
@@ -37,9 +38,10 @@
   },
   "contact": {
     "tittle": "CONTÁCTAME",
+    "subtittle": "Me pondré en contacto contigo lo antes posible.",
     "dc": "Háblame por Discord",
     "or": "o",
-    "email": "envíame un email",
+    "email": "Envíame un mensaje:",
     "placeholder-1": "Tu nombre completo",
     "placeholder-2": "Dirección de correos válida",
     "placeholder-3": "Tu mensaje",

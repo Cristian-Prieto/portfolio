@@ -20,7 +20,8 @@
   },
   "skills": {
     "tittle-1": "SKILLS",
-    "tittle-2": "ABOUT ME",
+    "tittle-2": "ABOUT",
+    "tittle-3": "ME",
     "description": "I'm 34 years old, i speak native spanish and basic english. I studied art but changed my life, now I dedicate myself body and soul to coding. I love to overcome goals that seems to me tough at the beginning. I want to improve my skills in the Front-End since I'm addicted to creating and showing things on the screen.",
     "card_1_front-tittle": "FAVOURITE BOOK",
     "card_2_front-tittle": "FAVOURITE SHOW",
@@ -37,9 +38,10 @@
   },
   "contact": {
     "tittle": "CONTACT ME",
+    "subtittle": "I will get in touch with you ass soon as possible",
     "dc": "Talk to me on Discord",
     "or": "or",
-    "email": "send me an email",
+    "email": "Send me a message:",
     "placeholder-1": "Your full name",
     "placeholder-2": "Valid email adress",
     "placeholder-3": "Your message",

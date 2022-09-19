@@ -94,11 +94,13 @@ function App() {
             <div className="flex flex-col gap-2 mb-4">
               <span
                 data-aos="fade-left"
-                className="flex text-black sm:text-7xl text-5xl font-bold"
+                className="flex text-black sm:text-7xl text-5xl font-bold tracking-tighter"
               >
-                Cristian Prieto,
+                <span>CRISTIAN </span>
+                <span className="pl-4">PRIETO</span>
+                <span className="text-green-500">,</span>
               </span>
-              <span className="text-xl sm:text-3xl text-right font-roboto">
+              <span className="text-xl sm:text-3xl text-center font-roboto mb-8">
                 {t("home-section.subtittle")}.
               </span>
             </div>
@@ -144,6 +146,11 @@ function App() {
             <Slider project={"shopbix"} imageFormat={"png"} />
             <div className="flex flex-col justify-center w-full">
               <h2 className="text-3xl text-center font-Oswald">Shopbix</h2>
+              <div className="flex gap-4">
+                <span className="mt-4 opacity-60">React.JS</span>
+                <span className="px-2 mt-4 opacity-60">TailwindCSS</span>
+                <span className="px-2 mt-4 opacity-60">API REST</span>
+              </div>
               <p className="text-left text-xl my-4">
                 {t("projects.description-1")}
               </p>
@@ -158,6 +165,11 @@ function App() {
             </div>
             <div className="flex w-full flex-col justify-center">
               <h2 className="text-3xl text-center font-Oswald">Foodubix</h2>
+              <div className="flex gap-4">
+                <span className="mt-4 opacity-60">React.JS</span>
+                <span className="px-2 mt-4 opacity-60">TailwindCSS</span>
+                <span className="px-2 mt-4 opacity-60">API REST</span>
+              </div>
               <p className="text-left text-xl my-4">
                 {t("projects.description-2")}
               </p>
@@ -172,6 +184,10 @@ function App() {
             </div>
             <div className="flex w-full flex-col justify-center">
               <h2 className="text-3xl text-center font-Oswald">Media-notes</h2>
+              <div className="flex gap-4">
+                <span className="mt-4 opacity-60">React.JS</span>
+                <span className="px-2 mt-4 opacity-60">Css</span>
+              </div>
               <p className="text-left text-xl my-4">
                 {t("projects.description-3")}
               </p>
@@ -186,6 +202,10 @@ function App() {
             </div>
             <div className="flex w-full flex-col justify-center">
               <h2 className="text-3xl text-center font-Oswald">PokeApp</h2>
+              <div className="flex gap-4">
+                <span className="mt-4 opacity-60">React.JS</span>
+                <span className="px-2 mt-4 opacity-60">Css</span>
+              </div>
               <p className="text-left text-xl my-4">
                 {t("projects.description-4")}
               </p>
@@ -244,13 +264,16 @@ function App() {
             </div>
             <div className="flex flex-col  lg:max-w-2xl">
               <h2 className="flex text-4xl justify-center font-Oswald mb-12 px-4">
-                {t("skills.tittle-2")}
+                <span>{t("skills.tittle-2")}</span>
+                <span className="pl-4 text-green-500">
+                  {t("skills.tittle-3")}
+                </span>
               </h2>
               <p className="text-xl text-left">{t("skills.description")}</p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-between text-center lg:text-right mt-12 md:mt-40 rounded-3xl p-16 sm:p-0 gap-8 transition duration-300">
+          <div className="flex flex-col sm:flex-row justify-between text-center lg:text-right mt-12 md:mt-44 rounded-3xl p-16 sm:p-0 gap-8 transition duration-300">
             <div className="group flex-1 rounded-xl perspective scale-100 hover:scale-110 transition duration-500">
               <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
                 <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
@@ -263,7 +286,7 @@ function App() {
                 </div>
                 <div className="absoolute h-40 flex my-rotate-y-180 backface-hidden">
                   <span className="absolute flex flex-col justify-center align-middle items-center text-center italic md:text-xl w-full h-full p-4 scale-75 group-hover:scale-100 transition delay-500 duration-1000 text-white">
-                    {t("skills.card_1-back")}
+                    “ {t("skills.card_1-back")} ”
                   </span>
                   <img
                     src="images/archivo.jpeg"
@@ -285,7 +308,7 @@ function App() {
                 </div>
                 <div className="absoolute h-40 flex my-rotate-y-180 backface-hidden">
                   <span className="absolute flex flex-col justify-center align-middle items-center text-center italic md:text-xl w-full h-full p-4 scale-75 group-hover:scale-100 transition delay-500 duration-1000 text-white">
-                    “{t("skills.card_2-back")}”
+                    “ {t("skills.card_2-back")} ”
                   </span>
                   <img
                     src="images/materu.png"
@@ -343,69 +366,93 @@ function App() {
           </div>
         </div>
       </Section>
-      <Section id="contact" className=" bg-black">
-        <h2 className="text-4xl font-Oswald mt-28 text-center text-white mb-8">
+      <section id="contact" className="">
+        {/* <h2 className="text-4xl font-Oswald mt-28 text-center text-white mb-8">
           {t("contact.tittle")}
-        </h2>
-        <div className="flex flex-col justify-center my-16 mx-auto max-w-[30rem] text-center text-white py-4 px-8 rounded-xl">
-          <div className="flex justify-center">
-            <CopyToClipboard text="cubix88#1780">
-              <div onClick={() => alert("Id en portapapeles 👍🏼")}>
-                <span className="flex text-md items-center gap-4 P-2 cursor-pointer text-white">
-                  {t("contact.dc")}
-                  <FaDiscord className="text-2xl" />
-                </span>
+        </h2> */}
+        <div className="flex flex-col lg:flex-row min-h-[calc(100vh-5rem)]">
+          <div className="flex w-full lg:w-1/2 bg-black">
+            <div className="flex flex-col justify-center items-center text-center w-full mx-auto py-16 text-white bg-grayPro-50">
+              <h2 className="font-Oswald text-5xl mb-8">
+                {t("contact.tittle")}
+              </h2>
+              <span className="mb-16 text-2xl text-gray-400">
+                {t("contact.subtittle")}
+              </span>
+              <div className="text-xl">{t("contact.dc")}</div>
+              <div className="flex justify-center">
+                <CopyToClipboard text="cubix88#1780">
+                  <div onClick={() => alert("Id en portapapeles 👍🏼")}>
+                    <span className="flex text-md items-center gap-4 p-2 cursor-pointer">
+                      <FaDiscord className="text-5xl scale-100 hover:scale-110 transition-all duration-500" />
+                    </span>
+                  </div>
+                </CopyToClipboard>
+                <Toaster />
               </div>
-            </CopyToClipboard>
-            <Toaster />
+            </div>
           </div>
-          {t("contact.or")}
-          <span className="mb-4"> {t("contact.email")}</span>
-          <form
-            onSubmit={sendEmail}
-            className="flex flex-col flex-1 gap-4 text-black"
-          >
-            <div className="flex">
-              <input
-                type="text"
-                name="name"
-                placeholder={t("contact.placeholder-1")}
-                required
-                className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300"
-              />
+          <div className="flex w-full lg:w-1/2 py-16 bg-bluePro-50">
+            <div className="flex flex-col flex-1 justify-center items-center w-full text-center text-white rounded-sm">
+              <form
+                onSubmit={sendEmail}
+                className="flex flex-col gap-4 text-white w-full max-w-[24rem] md:max-w-[28rem]"
+              >
+                <span className="w-full text-center text-xl">
+                  {t("contact.email")}
+                </span>
+                <div className="flex flex-col items-start gap-2">
+                  <label htmlFor="name" className="text-slate-300">
+                    {t("contact.placeholder-1")} *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide border-2 border-slate-500 focus:border-slate-300 text-white bg-bluePro-50 transition duration-300"
+                  />
+                </div>
+                <div className="flex flex-col items-start gap-2">
+                  <label htmlFor="email" className="text-slate-300">
+                    {t("contact.placeholder-2")} *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide border-2 border-slate-500 focus:border-slate-300 text-white bg-bluePro-50 transition duration-300"
+                  />
+                </div>
+                <div className="flex flex-col items-start gap-2">
+                  <label htmlFor="message" className="text-slate-300">
+                    {t("contact.placeholder-3")} *
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="6"
+                    required
+                    className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide border-2 border-slate-500 focus:border-slate-300 text-white bg-bluePro-50 transition duration-300"
+                  ></textarea>
+                </div>
+                <div>
+                  <input
+                    type="submit"
+                    value={t("contact.btn")}
+                    className={`text-white rounded-sm mt-8 py-2 px-8 bg-green-500 hover:bg-green-300 ${
+                      sendValue === "Sended!"
+                        ? "bg-green-200 pointer-events-none"
+                        : ""
+                    } transition duration-300`}
+                  />
+                </div>
+              </form>
             </div>
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder={t("contact.placeholder-2")}
-                required
-                className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300 valid:bg-slate-700"
-              />
-            </div>
-            <div>
-              <textarea
-                name="message"
-                placeholder={t("contact.placeholder-3")}
-                rows="6"
-                required
-                className="w-full outline-none p-2 rounded-md placeholder:text-slate-900 placeholder:focus:text-slate-600 font-medium tracking-wide text-slate-300 focus:text-black bg-slate-700 focus:bg-slate-400 transition duration-300"
-              ></textarea>
-            </div>
-            <div>
-              <input
-                type="submit"
-                value={t("contact.btn")}
-                className={`text-white rounded-md py-2 bg-red-500 w-full hover:bg-red-300 ${
-                  sendValue === "Sended!"
-                    ? "bg-green-200 pointer-events-none"
-                    : ""
-                } transition duration-300`}
-              />
-            </div>
-          </form>
+          </div>
         </div>
-      </Section>
+      </section>
     </div>
   );
 }
