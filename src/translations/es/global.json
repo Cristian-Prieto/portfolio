@@ -38,10 +38,10 @@
   },
   "contact": {
     "tittle": "CONTÁCTAME",
-    "subtittle": "Me pondré en contacto contigo lo antes posible.",
+    "subtittle": "Me pondré en contacto contigo lo antes posible!",
     "dc": "Háblame por Discord",
     "or": "o",
-    "email": "Envíame un mensaje:",
+    "email": "Envíame un mensaje",
     "placeholder-1": "Tu nombre completo",
     "placeholder-2": "Dirección de correos válida",
     "placeholder-3": "Tu mensaje",

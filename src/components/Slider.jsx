@@ -29,7 +29,7 @@ export function Slider({ project, imageFormat }) {
   return (
     <div
       data-aos="fade-in"
-      className="group relative flex min-w-[16rem] overflow-hidden"
+      className="group relative flex min-w-[16rem] overflow-hidden rounded-3xl"
     >
       <div className="absolute flex justify-between items-center w-full h-full p-4 opacity-0 group-hover:opacity-100 transition duration-300">
         <div onClick={backSlide}>

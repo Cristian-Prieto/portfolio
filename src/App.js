@@ -85,19 +85,19 @@ function App() {
         id="home"
         className="justify-center items-center mt-20 bg-beige-50"
       >
-        <div className="flex flex-col items-center max-w-7xl">
+        <div className="flex flex-col items-center">
           <h1 className="flex flex-col font-Oswald text-left">
-            <div className="flex align-bottom text-5xl gap-2">
-              <span className="">{t("home-section.hi")}</span>
+            <div className="flex align-bottom font-roboto text-5xl gap-2">
+              <span className="font-bold">{t("home-section.hi")}</span>
               <span>{t("home-section.i am")}</span>
             </div>
             <div className="flex flex-col gap-2 mb-4">
               <span
                 data-aos="fade-left"
-                className="flex text-black sm:text-7xl text-5xl font-bold tracking-tighter"
+                className="flex text-black text-6xl sm:text-8xl font-bold tracking-tighter"
               >
-                <span>CRISTIAN </span>
-                <span className="pl-4">PRIETO</span>
+                <span className="font-bolder">Cristian </span>
+                <span className="font-bolder pl-4">Prieto</span>
                 <span className="text-green-500">,</span>
               </span>
               <span className="text-xl sm:text-3xl text-center font-roboto mb-8">
@@ -275,8 +275,8 @@ function App() {
 
           <div className="flex flex-col sm:flex-row justify-between text-center lg:text-right mt-12 md:mt-44 rounded-3xl p-16 sm:p-0 gap-8 transition duration-300">
             <div className="group flex-1 rounded-xl perspective scale-100 hover:scale-110 transition duration-500">
-              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
-                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
+              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000 shadow-none group-hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)]">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-bluePro-50">
                   <span className="font-Oswald text-lg tracking-wide">
                     {t("skills.card_1_front-tittle")}
                   </span>
@@ -297,8 +297,8 @@ function App() {
               </div>
             </div>
             <div className="group flex-1 rounded-xl perspective scale-100 hover:scale-110 transition duration-500">
-              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
-                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
+              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000 shadow-none group-hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)]">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-bluePro-50">
                   <span className="font-Oswald text-lg tracking-wide">
                     {t("skills.card_2_front-tittle")}
                   </span>
@@ -319,8 +319,8 @@ function App() {
               </div>
             </div>
             <div className="group flex-1 rounded-xl perspective scale-100 hover:scale-110 transition duration-500">
-              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
-                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
+              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000 shadow-none group-hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)]">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-bluePro-50">
                   <span className="font-Oswald text-lg tracking-wide">
                     {t("skills.card_3_front-tittle")}
                   </span>
@@ -342,10 +342,10 @@ function App() {
               </div>
             </div>
             <div className="group flex-1 rounded-xl perspective scale-100 hover:scale-110 transition duration-500">
-              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000">
-                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-black">
+              <div className="relative flex flex-1 flex-col h-40 rounded-xl preserve-3d group-hover:my-rotate-y-180 duration-1000 shadow-none group-hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)]">
+                <div className="absolute flex flex-col justify-center w-full h-full p-4 backface-hidden rounded-2xl text-white bg-bluePro-50">
                   <span className="font-Oswald text-lg tracking-wide">
-                    {t("skills.card_3_front-tittle")}
+                    {t("skills.card_4_front-tittle")}
                   </span>
                   <div className="flex flex-col pt-2">
                     <span>{t("skills.card_4_front-text")}</span>
@@ -366,13 +366,10 @@ function App() {
           </div>
         </div>
       </Section>
-      <section id="contact" className="">
-        {/* <h2 className="text-4xl font-Oswald mt-28 text-center text-white mb-8">
-          {t("contact.tittle")}
-        </h2> */}
+      <section id="contact">
         <div className="flex flex-col lg:flex-row min-h-[calc(100vh-5rem)]">
           <div className="flex w-full lg:w-1/2 bg-black">
-            <div className="flex flex-col justify-center items-center text-center w-full mx-auto py-16 text-white bg-grayPro-50">
+            <div className="flex flex-col justify-center items-center text-center w-full mx-auto py-16 text-white from-black to-grayPro-50 bg-gradient-to-tr">
               <h2 className="font-Oswald text-5xl mb-8">
                 {t("contact.tittle")}
               </h2>
@@ -384,7 +381,7 @@ function App() {
                 <CopyToClipboard text="cubix88#1780">
                   <div onClick={() => alert("Id en portapapeles 👍🏼")}>
                     <span className="flex text-md items-center gap-4 p-2 cursor-pointer">
-                      <FaDiscord className="text-5xl scale-100 hover:scale-110 transition-all duration-500" />
+                      <FaDiscord className="text-6xl p-2 scale-100 hover:scale-110 transition-all duration-500 rounded-full border-2 border-white hover:border-green-500" />
                     </span>
                   </div>
                 </CopyToClipboard>
