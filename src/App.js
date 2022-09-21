@@ -52,7 +52,7 @@ const alert = (mesage) =>
   });
 
 function App() {
-  const [t] = useTranslation("global");
+  const [t, i18n] = useTranslation("global");
   const [sendValue, setSendValue] = useState(t("contact.btn"));
 
   const sendEmail = (event) => {
@@ -117,8 +117,12 @@ function App() {
                 </div>
               </a>
               <a
-                href="Cristian-Prieto_CV-ESP.pdf"
-                download="Cristian-Prieto_CV-ESP.pdf"
+                href={`Cristian-Prieto_CV-${
+                  i18n.language === "es" ? "ESP" : "ENG"
+                }.pdf`}
+                download={`Cristian-Prieto_CV-${
+                  i18n.language === "es" ? "ESP" : "ENG"
+                }.pdf`}
                 className=" py-1 px-2 rounded-md bg-black text-white hover:bg-bluePro-50 hover:text-beige-50 transition duration-300"
               >
                 <div className="flex items-center gap-2">
@@ -369,7 +373,7 @@ function App() {
       <section id="contact">
         <div className="flex flex-col lg:flex-row min-h-[calc(100vh-5rem)]">
           <div className="flex w-full lg:w-1/2 bg-black">
-            <div className="flex flex-col justify-center items-center text-center w-full mx-auto py-16 text-white from-black to-grayPro-50 bg-gradient-to-tr">
+            <div className="flex flex-col justify-center items-center text-center w-full mx-auto px-4 py-16 text-white from-black to-grayPro-50 bg-gradient-to-tr">
               <h2 className="font-Oswald text-5xl mb-8">
                 {t("contact.tittle")}
               </h2>
@@ -389,7 +393,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex w-full lg:w-1/2 py-16 bg-bluePro-50">
+          <div className="flex w-full lg:w-1/2 px-4 py-16 bg-bluePro-50">
             <div className="flex flex-col flex-1 justify-center items-center w-full text-center text-white rounded-sm">
               <form
                 onSubmit={sendEmail}

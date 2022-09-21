@@ -17,12 +17,12 @@ export function NavBar() {
   };
 
   useEffect(() => {
-    // if (isOpen) {
-    //   document.body.style = "overflow: hidden;";
-    // }
-    // return () => {
-    //   document.body.style = "";
-    // };
+    if (isOpen) {
+      document.body.style = "overflow: hidden;";
+    }
+    return () => {
+      document.body.style = "";
+    };
   }, [isOpen]);
 
   return (
@@ -35,11 +35,11 @@ export function NavBar() {
         onClick={toggleMenu}
         className={"sm:hidden h-20 w-20 mr-auto p-4"}
       >
-        <Hamburger />
+        <Hamburger toggled={isOpen} />
       </button>
 
       <ul
-        className={`sm:flex flex-col sm:flex-row items-center lg:justify-center w-full font-Oswald tracking-wide list-none sm:gap-8 md:gap-12 p-4 ${
+        className={`sm:flex flex-col sm:flex-row items-center justify-center w-full font-Oswald tracking-wide list-none sm:gap-8 md:gap-12 p-4 ${
           isOpen
             ? "flex h-[calc(100vh-5rem)] my-auto p-8 space-y-12 sm:space-y-0"
             : "hidden"
@@ -47,6 +47,7 @@ export function NavBar() {
       >
         <li>
           <Link
+            onClick={() => setisOpen(false)}
             to="home"
             spy={true}
             smooth={true}
@@ -59,6 +60,7 @@ export function NavBar() {
         </li>
         <li className="cursor-pointer hover:text-beige-50 transition duration-300">
           <Link
+            onClick={() => setisOpen(false)}
             to="projects"
             spy={true}
             smooth={true}
@@ -71,6 +73,7 @@ export function NavBar() {
         </li>
         <li className="cursor-pointer hover:text-beige-50 transition duration-300">
           <Link
+            onClick={() => setisOpen(false)}
             to="skills"
             spy={true}
             smooth={true}
@@ -83,6 +86,7 @@ export function NavBar() {
         </li>
         <li className="cursor-pointer hover:text-beige-50 transition duration-300">
           <Link
+            onClick={() => setisOpen(false)}
             to="contact"
             spy={true}
             smooth={true}
