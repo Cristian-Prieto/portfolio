@@ -13,7 +13,7 @@ export function Buttons({ project }) {
           <FaCode className="text-3xl hover:text-green-500 scale-100 hover:scale-110 transition-all duration-500" />
         </a>
       </button>
-      <button className="">
+      <button>
         <a
           href={`https://cubix-${project}.netlify.app/`}
           rel="noopener noreferrer"
