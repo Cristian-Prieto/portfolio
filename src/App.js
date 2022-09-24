@@ -220,7 +220,7 @@ function App() {
           </Article>
         </div>
       </Section>
-      <Section id="skills" className="bg-beige-50">
+      <Section id="skills" className="justify-center items-center bg-beige-50">
         <div className="flex flex-col justify-between my-24 max-w-[80rem]">
           <div className="flex flex-col lg:flex-row justify-between gap-16">
             <div className="flex flex-col items-center mb-4">
