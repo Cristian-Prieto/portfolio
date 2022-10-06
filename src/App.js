@@ -221,7 +221,7 @@ function App() {
         </div>
       </Section>
       <Section id="skills" className="justify-center items-center bg-beige-50">
-        <div className="flex flex-col justify-between my-24 max-w-[80rem]">
+        <div className="flex flex-col justify-between my-24">
           <div className="flex flex-col lg:flex-row justify-between gap-16">
             <div className="flex flex-col items-center mb-4">
               <h2 className="flex font-Oswald text-4xl w-full justify-center md:text-lef mb-14">
